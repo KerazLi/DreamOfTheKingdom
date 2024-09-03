@@ -6,19 +6,19 @@ namespace MStudio
     [InitializeOnLoad]
     public class StyleHierarchy
     {
-        static string[] dataArray;//Find ColorPalette GUID
-        static string path;//Get ColorPalette(ScriptableObject) path
-        static ColorPalette colorPalette;
+        static string[] _dataArray;//Find ColorPalette GUID
+        static string _path;//Get ColorPalette(ScriptableObject) path
+        static ColorPalette _colorPalette;
 
         static StyleHierarchy()
         {
-            dataArray = AssetDatabase.FindAssets("t:ColorPalette");
+            _dataArray = AssetDatabase.FindAssets("t:ColorPalette");
 
-            if (dataArray.Length >= 1)
+            if (_dataArray.Length >= 1)
             {    //We have only one color palette, so we use dataArray[0] to get the path of the file
-                path = AssetDatabase.GUIDToAssetPath(dataArray[0]);
+                _path = AssetDatabase.GUIDToAssetPath(_dataArray[0]);
 
-                colorPalette = AssetDatabase.LoadAssetAtPath<ColorPalette>(path);
+                _colorPalette = AssetDatabase.LoadAssetAtPath<ColorPalette>(_path);
 
                 EditorApplication.hierarchyWindowItemOnGUI += OnHierarchyWindow;
             }
@@ -27,15 +27,15 @@ namespace MStudio
         private static void OnHierarchyWindow(int instanceID, Rect selectionRect)
         {
             //To make sure there is no error on the first time the tool imported in project
-            if (dataArray.Length == 0) return;
+            if (_dataArray.Length == 0) return;
 
             UnityEngine.Object instance = EditorUtility.InstanceIDToObject(instanceID);
 
             if (instance != null)
             {
-                for (int i = 0; i < colorPalette.colorDesigns.Count; i++)
+                for (int i = 0; i < _colorPalette.colorDesigns.Count; i++)
                 {
-                    var design = colorPalette.colorDesigns[i];
+                    var design = _colorPalette.colorDesigns[i];
 
                     //Check if the name of each gameObject is begin with keyChar in colorDesigns list.
                     if (instance.name.StartsWith(design.keyChar))
