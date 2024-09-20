@@ -472,6 +472,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mapConfigSo: {fileID: 11400000, guid: eec2b6f7301901b47ad53867b1a14702, type: 2}
   roomPrefab: {fileID: 5493286314955772462, guid: f7df7c155d434734db8c931835380da6, type: 3}
+  linePrefab: {fileID: 5662362300082334396, guid: da69f130a7aee9e40a2b6c83d6a2ecb9, type: 3}
   border: 2.5
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

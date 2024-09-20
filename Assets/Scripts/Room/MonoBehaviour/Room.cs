@@ -1,33 +1,33 @@
-using System;
 using UnityEngine;
 
 public class Room : MonoBehaviour
 {
     //列
-    public int column;
+    [SerializeField] private int column;
+
     //行
-    public int line;
-    private SpriteRenderer _spriteRenderer;
+    [SerializeField] private int line;
     public RoomDataSo roomData;
     public RoomState roomState;
-
-    private void Start()
-    {
-        SetupRoom(0,0,roomData);
-    }
+    private SpriteRenderer _spriteRenderer;
 
     private void Awake()
     {
         _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
+    private void Start()
+    {
+        SetupRoom(0, 0, roomData);
+    }
+
     private void OnMouseDown()
     {
-        Debug.Log("Room clicked"+roomData.roomType);
+        Debug.Log("Room clicked" + roomData.roomType);
     }
 
     /// <summary>
-    /// 设置房间的属性和图标。
+    ///     设置房间的属性和图标。
     /// </summary>
     /// <param name="column">房间所在的列号。</param>
     /// <param name="line">房间所在的行号。</param>
@@ -43,5 +43,4 @@ public class Room : MonoBehaviour
         // 设置房间的图标为房间数据中提供的图标
         _spriteRenderer.sprite = roomData.roomIcon;
     }
-
 }
