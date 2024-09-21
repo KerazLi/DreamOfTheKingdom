@@ -10,24 +10,30 @@ public class Room : MonoBehaviour
     public RoomDataSo roomData;
     public RoomState roomState;
     private SpriteRenderer _spriteRenderer;
+    
+    [Header("广播")]
+    public ObjectEventSO loadRoomEvent;
 
     private void Awake()
     {
         _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
-
-    private void Start()
+    /// <summary>
+    /// 测试代码
+    /// </summary>
+    /*private void Start()
     {
         SetupRoom(0, 0, roomData);
-    }
+    }*/
 
     private void OnMouseDown()
     {
         Debug.Log("Room clicked" + roomData.roomType);
+        loadRoomEvent.RaiseEvent(roomData, this);
     }
 
     /// <summary>
-    ///     设置房间的属性和图标。
+    /// 设置房间的属性和图标。
     /// </summary>
     /// <param name="column">房间所在的列号。</param>
     /// <param name="line">房间所在的行号。</param>

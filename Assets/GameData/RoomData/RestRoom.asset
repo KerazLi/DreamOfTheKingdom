@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb741cf878c8204eb8db3c5d98a8053, type: 3}
-  m_Name: Boss
+  m_Name: RestRoom
   m_EditorClassIdentifier: 
-  roomIcon: {fileID: 21300000, guid: 8e5bebd214d59430d8dff7bb4e40f292, type: 3}
-  roomType: 32
+  roomIcon: {fileID: 21300000, guid: 6153fe14894024ff58b639f5e456c252, type: 3}
+  roomType: 16
   sceneToLoad:
-    m_AssetGUID: b001142cd7a9b2844b60e099053bd91e
+    m_AssetGUID: 99bbc6edceb6fc848be770def60b4ba5
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
@@ -23,6 +24,11 @@ public class MapGenerator : MonoBehaviour
     
     //保存房间之间的连线的列表
     private readonly List<LineRenderer> lines = new();
+    
+    
+    public List<RoomDataSo> roomDataList = new();
+
+    private Dictionary<RoomType, RoomDataSo> roomDataDict = new();
 
     // 每列房间的宽度，用于计算房间位置和布局
     private float _columnWidth;
@@ -49,6 +55,11 @@ public class MapGenerator : MonoBehaviour
 
         // 计算每列的宽度，将屏幕宽度分成房间蓝图数量加1份
         _columnWidth = _screenWidth / (mapConfigSo.roomBluePrints.Count + 1);
+
+        foreach (var roomData in roomDataList)
+        {
+            roomDataDict.Add(roomData.roomType,roomData);
+        }
     }
 
 
@@ -106,6 +117,10 @@ public class MapGenerator : MonoBehaviour
                 
                 // 在计算出的位置实例化房间对象，并将其添加到当前变换下
                 var room = Instantiate(roomPrefab, newPosition, quaternion.identity, transform);
+                RoomType newType = GetRandomRoomType(mapConfigSo.roomBluePrints[column].roomType);
+                
+                // 设置房间属性
+                room.SetupRoom(column, i, roomDataDict[newType]);
                 
                 // 将生成的房间添加到房间列表中
                 _rooms.Add(room);
@@ -189,4 +204,37 @@ public class MapGenerator : MonoBehaviour
         // 重新生成地图和连线
         GreateMap();
     }
+
+    /// <summary>
+    /// 根据房间类型获取随机房间数据
+    /// </summary>
+    /// <param name="roomType">房间类型</param>
+    /// <returns>对应房间类型的房间数据</returns>
+    private RoomDataSo GetRandomRoomData(RoomType roomType)
+    {
+        // 从字典中根据房间类型获取对应的房间数据
+        return roomDataDict[roomType];
+    }
+
+
+    /// <summary>
+    /// 从给定的房间类型标志中随机选择一种房间类型
+    /// </summary>
+    /// <param name="flags">包含多种可能房间类型的标志</param>
+    /// <returns>随机选择的一种房间类型</returns>
+    private RoomType GetRandomRoomType(RoomType flags)
+    {
+        // 将房间类型标志按逗号分隔，转换为字符串数组
+        string[] options = flags.ToString().Split(',');
+        
+        // 随机选择一个房间类型选项
+        string randomOption = options[Random.Range(0, options.Length)];
+        
+        // 将字符串的房间类型转换为RoomType枚举
+        RoomType roomType = (RoomType)Enum.Parse(typeof(RoomType), randomOption);
+        
+        // 返回随机选择的房间类型
+        return roomType;
+    }
+
 }

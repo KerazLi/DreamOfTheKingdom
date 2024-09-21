@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb741cf878c8204eb8db3c5d98a8053, type: 3}
-  m_Name: Boss
+  m_Name: Treasure
   m_EditorClassIdentifier: 
-  roomIcon: {fileID: 21300000, guid: 8e5bebd214d59430d8dff7bb4e40f292, type: 3}
-  roomType: 32
+  roomIcon: {fileID: 21300000, guid: 0ce208f8f0a7e4b7c85456c91a775378, type: 3}
+  roomType: 8
   sceneToLoad:
-    m_AssetGUID: b001142cd7a9b2844b60e099053bd91e
+    m_AssetGUID: d4e63d978be51e84bade272f44c7ab2a
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
