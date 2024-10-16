@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: f79b4ced74b78402ea26dff85fdfccf9
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 279359
+  packageName: Card Game Kit - Dream of the Kingdom
+  packageVersion: 2.0
+  assetPath: Assets/M STUDIO/Card Game Kit/Spine Animations/Player/Player.json
+  uploadId: 657075
