@@ -12,8 +12,8 @@ public class Room : MonoBehaviour
     public RoomState roomState;
     private SpriteRenderer _spriteRenderer;
     
-    /*[Header("广播")]
-    public ObjectEventSO loadRoomEvent;*/
+    [Header("广播")]
+    public ObjectEventSO loadRoomEvent;
 
     private void Awake()
     {
@@ -30,7 +30,7 @@ public class Room : MonoBehaviour
     private void OnMouseDown()
     {
         Debug.Log("Room clicked" + roomData.roomType);
-        //loadRoomEvent.RaiseEvent(roomData, this);
+        loadRoomEvent.RaiseEvent(roomData, this);
     }
 
     /// <summary>

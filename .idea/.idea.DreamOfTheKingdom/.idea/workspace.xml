@@ -5,19 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="89a9e470-03e6-4f27-ad92-72370317cd51" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/DefaultVolumeProfile.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DefaultVolumeProfile.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/InputSystem_Actions.inputactions" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/InputSystem_Actions.inputactions.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset.meta" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.DreamOfTheKingdom/.idea/git_toolbox_prj.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DreamOfTheKingdom/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DreamOfTheKingdom/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Room/RoomPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Room/RoomPrefab.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rooms/MonoBehaviour/Room.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rooms/MonoBehaviour/Room.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +19,22 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;KerazLi&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/KerazLi/DreamOfTheKingdom.git&quot;,
+    &quot;accountId&quot;: &quot;31aed016-b587-43af-8aca-c543cc7f08b0&quot;
+  }
+}</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Event/Editor/BaseEventSOEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Event/MonoBehaviour/BaseEventListener.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Event/ScriptObject/ObjectEventSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/Enums.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
@@ -42,7 +49,9 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -102,8 +111,20 @@
       <workItem from="1729105613534" duration="165000" />
       <workItem from="1729105828490" duration="290000" />
       <workItem from="1729158629772" duration="2704000" />
-      <workItem from="1729268539364" duration="2959000" />
+      <workItem from="1729268539364" duration="4033000" />
+      <workItem from="1729496680945" duration="338000" />
+      <workItem from="1729498294234" duration="809000" />
+      <workItem from="1729581983280" duration="4303000" />
     </task>
+    <task id="LOCAL-00001" summary="实现随机地图">
+      <option name="closed" value="true" />
+      <created>1729273177638</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1729273177638</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,7 +138,20 @@
     <option name="unityProjectFolder" value="true" />
   </component>
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="实现随机地图" />
+    <option name="LAST_COMMIT_MESSAGE" value="实现随机地图" />
   </component>
 </project>
