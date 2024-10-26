@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89a9e470-03e6-4f27-ad92-72370317cd51" name="Changes" comment="房间进出逻辑" />
+    <list default="true" id="89a9e470-03e6-4f27-ad92-72370317cd51" name="Changes" comment="保存地图场景">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DreamOfTheKingdom/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DreamOfTheKingdom/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,11 +30,14 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1d7fdf1f7afe4c58866b88a610a83dc71dda00/84/0625132f/UnityAction`1.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://D:/UnityCode/DreamOfTheKingdom/Assets/Scenes/Boss.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/UnityCode/DreamOfTheKingdom/Assets/Scenes/Map.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Event/Editor/BaseEventSOEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Event/Editor/ObjectEventSOEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Event/MonoBehaviour/BaseEventListener.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Event/ScriptObject/ObjectEventSO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Rooms/ScriptObject/MapLayoutSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/Enums.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/SerializeVector3.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -113,7 +118,7 @@
       <workItem from="1729498294234" duration="809000" />
       <workItem from="1729581983280" duration="13648000" />
       <workItem from="1729963821188" duration="714000" />
-      <workItem from="1729964601019" duration="755000" />
+      <workItem from="1729964601019" duration="4741000" />
     </task>
     <task id="LOCAL-00001" summary="实现随机地图">
       <option name="closed" value="true" />
@@ -139,7 +144,23 @@
       <option name="project" value="LOCAL" />
       <updated>1729965349126</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="房间进出逻辑">
+      <option name="closed" value="true" />
+      <created>1729965380514</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1729965380514</updated>
+    </task>
+    <task id="LOCAL-00005" summary="保存地图场景">
+      <option name="closed" value="true" />
+      <created>1729969351961</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1729969351961</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,6 +190,7 @@
     <MESSAGE value="实现随机地图" />
     <MESSAGE value="泛型事件框架" />
     <MESSAGE value="房间进出逻辑" />
-    <option name="LAST_COMMIT_MESSAGE" value="房间进出逻辑" />
+    <MESSAGE value="保存地图场景" />
+    <option name="LAST_COMMIT_MESSAGE" value="保存地图场景" />
   </component>
 </project>

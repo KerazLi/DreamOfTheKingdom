@@ -4,10 +4,10 @@ using UnityEngine;
 public class Room : MonoBehaviour
 {
     //列
-    [SerializeField] private int column;
+    public  int column;
 
     //行
-    [SerializeField] private int line;
+    public  int line;
     public RoomDataSO roomData;
     public RoomState roomState;
     private SpriteRenderer _spriteRenderer;
