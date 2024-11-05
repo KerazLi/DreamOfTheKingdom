@@ -136,8 +136,16 @@ public class MapGenerator : MonoBehaviour
                 newPosition.y = startHeight - roomGapY * i;
 
                 // 在计算出的位置实例化房间对象，并将其添加到当前变换下
-                var room = Instantiate(roomPrefab, newPosition, quaternion.identity, transform);
+                var room = Instantiate(roomPrefab, newPosition, quaternion.identity, this.transform);
                 RoomType newType = GetRandomRoomType(mapConfigSo.roomBluePrints[column].roomType);
+                if (column==0)
+                {
+                    room.roomState = RoomState.Attainable;
+                }
+                else
+                {
+                    room.roomState = RoomState.Locked;
+                }
 
                 // 设置房间属性
                 room.SetupRoom(column, i, roomDataDict[newType]);
@@ -173,7 +181,7 @@ public class MapGenerator : MonoBehaviour
         foreach (var room in column1)
         {
             //随机选择一个房间作为连线目标
-            var targetRoom = ConnectionToRandomRoom(room, column2);
+            var targetRoom = ConnectionToRandomRoom(room, column2,false);
 
             //将目标房间添加到已连接房间集合中
             connectionColumn2Rooms.Add(targetRoom);
@@ -185,19 +193,27 @@ public class MapGenerator : MonoBehaviour
             if (connectionColumn2Rooms.Contains(room)) continue;
 
             //随机选择一个房间作为连线目标
-            var targetRoom = ConnectionToRandomRoom(room, column1);
+            var targetRoom = ConnectionToRandomRoom(room, column1,true);
         }
     }
 
     /// <summary>
-    /// 随机连线
-    /// </summary>
+    ///  </summary>随机连线
+                                                                  ///
     /// <param name="room">房间连线的起始点</param>
     /// <param name="column2">房间连线的终点</param>
     /// <returns></returns>
-    private Room ConnectionToRandomRoom(Room room, List<Room> column2)
+    private Room ConnectionToRandomRoom(Room room, List<Room> column2,bool check)
     {
         Room targetRoom = column2[Random.Range(0, column2.Count)];
+        if (check)
+        {
+            targetRoom.linkToRooms.Add(new(room.column,room.line));
+        }
+        else
+        {
+            room.linkToRooms.Add(new(targetRoom.column,targetRoom.line));
+        }
 
         //创建房间的连线
         var line = Instantiate(linePrefab, room.transform);
@@ -280,7 +296,8 @@ public class MapGenerator : MonoBehaviour
                 posX = room.transform.position.x,
                 posY = room.transform.position.y,
                 roomData = room.roomData,
-                roomState = room.roomState
+                roomState = room.roomState,
+                linkToRooms = room.linkToRooms
             });
         }
 
@@ -304,6 +321,7 @@ public class MapGenerator : MonoBehaviour
             var newRoom = Instantiate(roomPrefab, newPosition, Quaternion.identity);
             newRoom.roomState = mapRoomData.roomState;
             newRoom.SetupRoom(mapRoomData.column, mapRoomData.line, mapRoomData.roomData);
+            newRoom.linkToRooms = mapRoomData.linkToRooms;
             _rooms.Add(newRoom);
         }
 

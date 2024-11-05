@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Room : MonoBehaviour
@@ -11,6 +12,7 @@ public class Room : MonoBehaviour
     public RoomDataSO roomData;
     public RoomState roomState;
     private SpriteRenderer _spriteRenderer;
+    public List<Vector2Int> linkToRooms = new ();
     
     [Header("广播")]
     public ObjectEventSO loadRoomEvent;
@@ -29,8 +31,11 @@ public class Room : MonoBehaviour
 
     private void OnMouseDown()
     {
-        Debug.Log("Room clicked" + roomData.roomType);
-        loadRoomEvent.RaiseEvent(roomData, this);
+        //Debug.Log("Room clicked" + roomData.roomType);
+        if (roomState==RoomState.Attainable)
+        {
+            loadRoomEvent.RaiseEvent(this, this);
+        }
     }
 
     /// <summary>
@@ -49,5 +54,18 @@ public class Room : MonoBehaviour
         this.roomData = roomData;
         // 设置房间的图标为房间数据中提供的图标
         _spriteRenderer.sprite = roomData.roomIcon;
+
+        // 根据房间状态设置精灵渲染器的颜色
+        _spriteRenderer.color = roomState switch
+        {
+            // 当房间状态为锁定时，设置颜色为黑色
+            RoomState.Locked => new(0.0f,0.0f,0.0f,1f),
+            // 当房间状态为已访问时，同样设置颜色为黑色
+            RoomState.Visited => new(0.0f,0.0f,0.0f,1f),
+            // 当房间状态为可到达时，设置颜色为白色
+            RoomState.Attainable => Color.white,
+            // 如果房间状态不在预期范围内，抛出异常
+            _ => throw new ArgumentOutOfRangeException()
+        };
     }
 }

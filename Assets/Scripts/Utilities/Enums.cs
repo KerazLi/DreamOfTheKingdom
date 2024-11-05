@@ -27,7 +27,7 @@ public enum RoomType
 public enum RoomState
 {
     // 房间已被发现但未访问
-    Looked,
+    Locked,
 
     // 房间已被访问
     Visited,

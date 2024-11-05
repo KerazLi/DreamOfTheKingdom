@@ -87,6 +87,7 @@ MonoBehaviour:
   line: 0
   roomData: {fileID: 11400000, guid: 5c5c9eab25caf824389e50e8667595cd, type: 2}
   roomState: 0
+  linkToRooms: []
   loadRoomEvent: {fileID: 11400000, guid: 83c6052dcadb02541a8c026c950eab30, type: 2}
 --- !u!1 &8773228376023447452
 GameObject:
@@ -165,7 +166,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: a061c3a2654774fb68847ee59bdaede4, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
