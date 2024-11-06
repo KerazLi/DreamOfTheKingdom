@@ -35,3 +35,10 @@ public enum RoomState
     // 房间可以被访问但未被发现
     Attainable
 }
+
+public enum CardType
+{
+    Attack,
+    Defense,
+    Skill
+}
