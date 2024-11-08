@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Utilities;
 
 /// <summary>
 /// 地图配置单例类

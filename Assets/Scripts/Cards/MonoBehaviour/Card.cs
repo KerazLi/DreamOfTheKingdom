@@ -2,6 +2,7 @@ using System;
 using Cards.ScriptObject;
 using TMPro;
 using UnityEngine;
+using Utilities;
 
 public class Card : MonoBehaviour
 {

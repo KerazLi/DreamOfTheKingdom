@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using Utilities;
 
 [CreateAssetMenu(fileName = "MapLayoutSO", menuName = "Map/MapLayoutSO")]
 public class MapLayoutSO : ScriptableObject

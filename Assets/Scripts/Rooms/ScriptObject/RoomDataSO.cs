@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.AddressableAssets;
+using Utilities;
 
 [CreateAssetMenu(fileName = "RoomDataSO", menuName = "Map/RoomData")]
 public class RoomDataSO : ScriptableObject
