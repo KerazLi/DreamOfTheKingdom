@@ -1,4 +1,5 @@
 using System;
+using Cards.ScriptObject;
 using UnityEngine;
 using Utilities;
 
@@ -13,7 +14,9 @@ namespace Manager
         /// 地图布局的单例对象，用于存储和管理地图的布局数据。
         /// </summary>
         public MapLayoutSO mapLayoutSO;
-    
+
+        
+
         /// <summary>
         /// 更新地图布局数据，根据给定的房间位置更新房间状态。
         /// </summary>

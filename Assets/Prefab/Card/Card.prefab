@@ -285,7 +285,7 @@ MonoBehaviour:
   costText: {fileID: 801118596352155281}
   descriptionText: {fileID: 61449921861407234}
   typeText: {fileID: 4756514359246880585}
-  cardData: {fileID: 11400000, guid: eca311dd4501d8749a7e78522195c5e9, type: 2}
+  cardData: {fileID: 0}
 --- !u!1 &3984063436878840138
 GameObject:
   m_ObjectHideFlags: 0

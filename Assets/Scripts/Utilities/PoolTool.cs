@@ -10,7 +10,7 @@ namespace Utilities
         public GameObject objPrefab;
         private ObjectPool<GameObject> pool;
 
-        private void Start()
+        private void Awake()
         {
             // 初始化一个GameObject的对象池
             pool = new ObjectPool<GameObject>(
