@@ -162,11 +162,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a13384ac7e841024bb2208669753c097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isHorizonal: 1
+  isHorizonal: 0
   cardMaxWidth: 7
   cardSpacing: 2
   cardPositions: []
-  centerPoint: {x: 0, y: -5.5, z: 0}
+  centerPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -629,6 +629,7 @@ MonoBehaviour:
   cardManager: {fileID: 1607465197}
   handCard: []
   cardLayoutManager: {fileID: 369392461}
+  deckPosition: {x: 0, y: 0, z: 0}
 --- !u!4 &1633332978
 Transform:
   m_ObjectHideFlags: 0
