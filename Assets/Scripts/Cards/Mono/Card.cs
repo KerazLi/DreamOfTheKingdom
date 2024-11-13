@@ -7,9 +7,9 @@ using UnityEngine.EventSystems;
 using UnityEngine.Rendering;
 using Utilities;
 
-namespace Cards.MonoBehaviour
+namespace Cards.Mono
 {
-    public class Card : UnityEngine.MonoBehaviour,IPointerEnterHandler,IPointerExitHandler
+    public class Card : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler
     {
         // 定义卡片的视觉组件和文本信息
         [Header("组件")] 
