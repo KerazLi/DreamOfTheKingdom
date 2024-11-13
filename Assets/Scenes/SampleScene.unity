@@ -166,6 +166,8 @@ MonoBehaviour:
   cardMaxWidth: 7
   cardSpacing: 2
   cardPositions: []
+  angleBetweenCards: 7
+  radius: 17
   centerPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:

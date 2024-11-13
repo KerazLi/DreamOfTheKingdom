@@ -1,9 +1,8 @@
-using System;
 using System.Collections.Generic;
+using Cards.MonoBehaviour;
 using Cards.ScriptObject;
 using DG.Tweening;
 using Manager;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
 using Utilities;
@@ -101,12 +100,14 @@ public class CardDeck : MonoBehaviour
             //卡牌的缩放为1
             currentCard.transform.DOScale(Vector3.one, 0.2f).SetDelay(delay).onComplete= () =>
             {
-                currentCard.transform.DOMove(cardTransform.pos, 0.5f);
+                currentCard.transform.DOMove(cardTransform.pos, 0.5f).onComplete =
+                    () => currentCard.isAniamting = false;
                 currentCard.transform.DORotateQuaternion(cardTransform.rotation, 0.5f);
             };
             
             // 设置卡牌的排序
             currentCard.GetComponent<SortingGroup>().sortingOrder = i;
+            currentCard.UpdatePositionRotation(cardTransform.pos, cardTransform.rotation);
         }
     }
 

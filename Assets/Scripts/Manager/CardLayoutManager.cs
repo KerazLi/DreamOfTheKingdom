@@ -75,18 +75,19 @@ namespace Manager
             }
             else
             {
-                // 计算垂直布局时卡片的最大旋转角度
-                float cardAngle = (numberOfCards - 1) * angleBetweenCards /2;
+                // 计算卡片扇形布局的初始角度
+                float cardAngle = (numberOfCards - 1) * angleBetweenCards / 2;
                 
-                // 遍历每个卡片，计算其在垂直布局下的位置和旋转
+                // 遍历每一张卡片，计算其位置和旋转
                 for (int i = 0; i < numberOfCards; i++)
                 {
-                    // 计算当前卡片的位置
+                    // 计算卡片的位置
                     var pos = FanCardPosition(cardAngle - i * angleBetweenCards);
-                    // 计算当前卡片的旋转
-                    var rotation = Quaternion.Euler(0, 0, -angleBetweenCards * i);
-                    
-                    // 将计算出的位置和旋转添加到列表中
+                
+                    // 计算卡片的旋转
+                    var rotation = Quaternion.Euler(0, 0, cardAngle - i * angleBetweenCards);
+                
+                    // 将卡片的位置和旋转添加到列表中
                     cardPositions.Add(pos);
                     cardRotations.Add(rotation);
                 }
@@ -94,19 +95,20 @@ namespace Manager
         }
 
         /// <summary>
-        /// 根据角度计算扇形卡片的位置。
+        /// 计算卡片在扇形布局中的位置。
         /// </summary>
-        /// <param name="angle">扇形卡片相对于中心点的角度。</param>
-        /// <returns>返回扇形卡片的位置。</returns>
+        /// <param name="angle">卡片相对于中心点的角度。</param>
+        /// <returns>卡片的位置。</returns>
         private Vector3 FanCardPosition(float angle)
         {
-            // 计算扇形卡片的x坐标，使用正弦函数根据角度和半径计算偏移量
-            // 计算扇形卡片的y坐标，使用余弦函数根据角度和半径计算偏移量
-            // 扇形卡片的z坐标设置为0，保持在同一个平面上
-            return new Vector3(centerPoint.x - Mathf.Sin(Mathf.Deg2Rad * angle) * radius,
-                                centerPoint.y + Mathf.Cos(Mathf.Deg2Rad * angle) * radius,
-                                0
-                                );
+            // 根据角度和半径计算卡片的x坐标
+            float x = centerPoint.x - Mathf.Sin(Mathf.Deg2Rad * angle) * radius;
+            // 根据角度和半径计算卡片的y坐标
+            float y = centerPoint.y + Mathf.Cos(Mathf.Deg2Rad * angle) * radius;
+        
+            // 返回卡片的位置
+            return new Vector3(x, y, 0);
         }
+            
     }
 }
