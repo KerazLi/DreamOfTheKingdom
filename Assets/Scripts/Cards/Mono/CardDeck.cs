@@ -44,7 +44,8 @@ namespace Cards.Mono
                     drawDeck.Add(cardData.cardData);
                 }
             }
-            //TODO:洗牌/更新抽牌堆or弃牌堆的数字
+            
+            ShuffleDeck();
         }
     
         /// <summary>
@@ -66,7 +67,11 @@ namespace Cards.Mono
             {
                 if (drawDeck.Count==0)
                 {
-                    //TODO:洗牌/更新抽牌堆OR弃牌堆的数字
+                    foreach (var item in discardDeck)
+                    {
+                       drawDeck.Add(item); 
+                    }
+                    ShuffleDeck();
                 }
                 CardDataSO currentCard=drawDeck[0];
                 drawDeck.RemoveAt(0);
@@ -110,6 +115,32 @@ namespace Cards.Mono
                 currentCard.GetComponent<SortingGroup>().sortingOrder = i;
                 currentCard.UpdatePositionRotation(cardTransform.pos, cardTransform.rotation);
             }
+        }
+        /// <summary>
+        /// 洗牌
+        /// </summary>
+        private void ShuffleDeck()
+        {
+            discardDeck.Clear();
+
+            for (int i = 0; i < drawDeck.Count; i++)
+            {
+                CardDataSO cardData = drawDeck[i];
+                int randomIndex = Random.Range(1,drawDeck.Count);
+                drawDeck[i] = drawDeck[randomIndex];
+                drawDeck[randomIndex] = cardData;
+            }
+        }
+        /// <summary>
+        /// 弃牌
+        /// </summary>
+        /// <param name="card"></param>
+        public void DiscardCard(Card card)
+        {
+            discardDeck.Add(card.cardData);
+            handCard.Remove(card);
+            cardManager.ReleaseCardObject(card.gameObject);
+            SetCardLayout(0f);
         }
 
 
