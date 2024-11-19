@@ -1,5 +1,6 @@
 using System;
 using Cards.ScriptObject;
+using Character;
 using TMPro;
 using Unity.Mathematics;
 using UnityEngine;
@@ -26,6 +27,8 @@ namespace Cards.Mono
         [HideInInspector] public Quaternion originalRotation;
         [HideInInspector]public int originalLayerOrder;
         [HideInInspector] public bool isAniamting;
+        public Player player;
+        [Header("广播事件")] public ObjectEventSO disscardCardEvent;
         
         /// <summary>
         /// 初始化卡片数据
@@ -44,6 +47,7 @@ namespace Cards.Mono
                 CardType.Skill => "技能",
                 _ => throw new ArgumentOutOfRangeException()
             };
+            player = GameObject.FindWithTag("Player").GetComponent<Player>();
         }
         
         /// <summary>
@@ -94,6 +98,16 @@ namespace Cards.Mono
         {
             transform.SetPositionAndRotation(originalPosition,originalRotation);
             GetComponent<SortingGroup>().sortingOrder = originalLayerOrder;
+        }
+
+        public void ExecuteCardEffects(CharacterBase from,CharacterBase target)
+        {
+            //TODO:减少能量，回收卡牌
+            disscardCardEvent.RaiseEvent(this,this);
+            foreach (var effect in cardData.CardEffects)
+            {
+                effect.Excute(from, target);
+            }
         }
 
 

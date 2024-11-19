@@ -135,8 +135,9 @@ namespace Cards.Mono
         /// 弃牌
         /// </summary>
         /// <param name="card"></param>
-        public void DiscardCard(Card card)
+        public void DiscardCard(object obj)
         {
+            Card card=obj as Card;
             discardDeck.Add(card.cardData);
             handCard.Remove(card);
             cardManager.ReleaseCardObject(card.gameObject);

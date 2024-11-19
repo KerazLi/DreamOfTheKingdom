@@ -44,4 +44,10 @@ namespace Utilities
         Defense,
         Skill
     }
+
+    public enum EffectTargetType
+    {
+        Self,Target,All
+    }
+    
 }

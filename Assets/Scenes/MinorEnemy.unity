@@ -280,7 +280,7 @@ GameObject:
   - component: {fileID: 1742775541}
   - component: {fileID: 1742775542}
   - component: {fileID: 1742775543}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MinorEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}

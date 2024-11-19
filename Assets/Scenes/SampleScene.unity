@@ -127,6 +127,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 173557187}
+  - component: {fileID: 173557188}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -150,6 +151,20 @@ Transform:
   - {fileID: 1469726241}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &173557188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173557186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87999febbd737a34dbcfb23f83e24317, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHp: 0
+  hp: {fileID: 11400000, guid: 7f5edb736c108d8479aeaf05aafa74ec, type: 2}
 --- !u!1 &369392459
 GameObject:
   m_ObjectHideFlags: 0
@@ -793,6 +808,7 @@ GameObject:
   - component: {fileID: 1633332978}
   - component: {fileID: 1633332977}
   - component: {fileID: 1633332979}
+  - component: {fileID: 1633332980}
   m_Layer: 0
   m_Name: CardDeck
   m_TagString: Untagged
@@ -851,6 +867,34 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: Cards.Mono.CardDeck, Assembly-CSharp
         m_MethodName: InitializeDeck
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1633332980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633332976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0effa64ff8857bf44b3de6bbeac2a4ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventSO: {fileID: 11400000, guid: 59fe3078af4548147b105f4bc8821a6b, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1633332977}
+        m_TargetAssemblyTypeName: Cards.Mono.CardDeck, Assembly-CSharp
+        m_MethodName: DiscardCard
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

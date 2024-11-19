@@ -12,6 +12,7 @@ namespace Cards.Mono
         private Card currentCard;
         private bool canMove;
         private bool canExecute;
+        private CharacterBase target;
 
         private void Awake()
         {
@@ -46,6 +47,23 @@ namespace Cards.Mono
                 canExecute = worldPos.y > 1f;
 
             }
+            else
+            {
+                if (eventData.pointerEnter==null)
+                {
+                    return;
+                }
+
+                if (eventData.pointerEnter.CompareTag("Enemy"))
+                {
+                    canExecute = true;
+                    target = eventData.pointerEnter.GetComponent<CharacterBase>();
+                    return;
+                }
+
+                canExecute = true;
+                target = null;
+            }
         }
 
         public void OnEndDrag(PointerEventData eventData)
@@ -56,7 +74,7 @@ namespace Cards.Mono
             }
             if (canExecute)
             {
-                //TODO:卡牌效果
+                currentCard.ExecuteCardEffects(currentCard.player,target);
             }
             else
             {

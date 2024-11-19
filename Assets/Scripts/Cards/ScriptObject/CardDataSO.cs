@@ -1,5 +1,8 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using Utilities;
+using CardEffects;
+
 
 namespace Cards.ScriptObject
 {
@@ -12,6 +15,8 @@ namespace Cards.ScriptObject
        public CardType cardType;
        [TextArea]
        public string cardDescription;
-       //TODO:执行效果
+       //执行效果
+       public List<CardEffect> CardEffects;
     }
 }
+

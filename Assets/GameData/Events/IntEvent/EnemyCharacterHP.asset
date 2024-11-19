@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 305bfc62c8ef45fb88b3fe7954d3a1b5, type: 3}
   m_Name: EnemyCharacterHP
   m_EditorClassIdentifier: 
-  description: 
-  lastSender: 
+  description: "\u76D1\u542C\u654C\u4EBA\u7684\u8840\u91CF\u7684\u4FE1\u606F"
+  lastSender: EnemyHP (Variable.IntVariable)

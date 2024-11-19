@@ -4,22 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89a9e470-03e6-4f27-ad92-72370317cd51" name="Changes" comment="实现洗牌逻辑">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Event/Editor/IntEventSOEditior.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Event/Editor/IntEventSOEditior.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Event/MonoBehaviour/IntEventListener.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Event/MonoBehaviour/IntEventListener.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Event/ScriptObject/IntEventSO.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Event/ScriptObject/IntEventSO.cs.meta" afterDir="false" />
+    <list default="true" id="89a9e470-03e6-4f27-ad92-72370317cd51" name="Changes" comment="人物基类代码和怪物素材和spine插件的导入">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DreamOfTheKingdom/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DreamOfTheKingdom/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Font/SmileySans-Oblique SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Font/SmileySans-Oblique SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Animations/CutScene/CutScene 1.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Animations/CutScene/CutScene 1.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Prefabs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Boss.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Boss.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/EliteEnemy.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/EliteEnemy.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameData/CardData/Attack.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameData/CardData/Attack.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameData/Events/IntEvent/EnemyCharacterHP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameData/Events/IntEvent/EnemyCharacterHP.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameData/Events/IntEvent/PlayerCharacterHP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameData/Events/IntEvent/PlayerCharacterHP.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameData/Variable/PlayerHP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameData/Variable/PlayerHP.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Card/Card.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Card/Card.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MinorEnemy.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MinorEnemy.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Event/MonoBehaviour/ObjectEventListener.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Event/MonoBehaviour/ObjectEventListener.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Cards/Mono/Card.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Cards/Mono/Card.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Cards/Mono/CardDeck.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Cards/Mono/CardDeck.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Cards/Mono/CardDragHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Cards/Mono/CardDragHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Cards/ScriptObject/CardDataSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Cards/ScriptObject/CardDataSO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/Enums.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/Enums.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +42,7 @@
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1d7fdf1f7afe4c58866b88a610a83dc71dda00/84/0625132f/UnityAction`1.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/UnityCode/DreamOfTheKingdom/Assets/Prefab/Card/Card.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/Player.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Event/Editor/BaseEventSOEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Event/Editor/ObjectEventSOEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Event/MonoBehaviour/BaseEventListener.cs" root0="FORCE_HIGHLIGHTING" />
@@ -175,7 +174,8 @@
       <workItem from="1731535389681" duration="2846000" />
       <workItem from="1731605691774" duration="324000" />
       <workItem from="1731606058627" duration="4332000" />
-      <workItem from="1731929851319" duration="1811000" />
+      <workItem from="1731929851319" duration="3574000" />
+      <workItem from="1732022446906" duration="1990000" />
     </task>
     <task id="LOCAL-00001" summary="实现随机地图">
       <option name="closed" value="true" />
@@ -329,7 +329,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731607778962</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="人物基类代码和怪物素材和spine插件的导入">
+      <option name="closed" value="true" />
+      <created>1731931749468</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1731931749468</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -384,7 +392,8 @@
     <MESSAGE value="卡牌拖拽" />
     <MESSAGE value="完成攻击牌的拖拽指针" />
     <MESSAGE value="实现洗牌逻辑" />
-    <option name="LAST_COMMIT_MESSAGE" value="实现洗牌逻辑" />
+    <MESSAGE value="人物基类代码和怪物素材和spine插件的导入" />
+    <option name="LAST_COMMIT_MESSAGE" value="人物基类代码和怪物素材和spine插件的导入" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
