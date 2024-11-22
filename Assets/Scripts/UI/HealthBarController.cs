@@ -57,7 +57,14 @@ namespace UI
             {
                 healthBar.title = $"{currentChararcterHP.CurrentHP}/{currentChararcterHP.maxHp}";
                 healthBar.value=currentChararcterHP.CurrentHP;
+                healthBar.RemoveFromClassList("highHealth");
+                healthBar.RemoveFromClassList("lowHealth");
+                healthBar.RemoveFromClassList("middleHealth");
+                healthBar.AddToClassList(currentChararcterHP.CurrentHP<=currentChararcterHP.maxHp/3?"lowHealth":currentChararcterHP.CurrentHP<=currentChararcterHP.maxHp/2?"middleHealth":"highHealth");
             }
+            
+            
+            
         }
     }
 }
