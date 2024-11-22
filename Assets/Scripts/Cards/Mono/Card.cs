@@ -68,13 +68,17 @@ namespace Cards.Mono
         /// <param name="eventData">事件数据</param>
         public void OnPointerEnter(PointerEventData eventData)
         {
+            // 检查是否正在执行动画，如果是，则不执行后续代码
             if (isAnimating)
             {
                 return;
             }
-        
+            
+            // 将游戏对象的位置设置为原始位置加上一个单位向上的偏移量
             transform.position = originalPosition + Vector3.up;
+            // 将游戏对象的旋转设置为单位四元数，即没有旋转
             transform.rotation = quaternion.identity;
+            // 获取游戏对象的SortingGroup组件，并将排序顺序设置为20
             GetComponent<SortingGroup>().sortingOrder = 20;
         }
         

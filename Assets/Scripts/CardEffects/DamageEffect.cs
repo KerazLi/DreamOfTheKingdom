@@ -1,4 +1,5 @@
 ﻿using System;
+using Unity.VisualScripting;
 using UnityEngine;
 using Utilities;
 
@@ -9,6 +10,7 @@ namespace CardEffects
     {
         public override void Excute(CharacterBase from, CharacterBase target)
         {
+            
             if (target==null)
             {
                 return;

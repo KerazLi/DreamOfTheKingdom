@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Cards.ScriptObject;
 using DG.Tweening;
+using Event.ScriptObject;
 using Manager;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -21,6 +22,9 @@ namespace Cards.Mono
         public CardLayoutManager cardLayoutManager;
 
         public Vector3 deckPosition;
+        [Header("事件广播")]
+        [SerializeField] private IntEventSO drawCountEvent;
+        [SerializeField] private IntEventSO discardCountEvent;
     
         /// <summary>
         /// 测试初始化牌堆的方法
@@ -75,6 +79,8 @@ namespace Cards.Mono
                 }
                 CardDataSO currentCard=drawDeck[0];
                 drawDeck.RemoveAt(0);
+                //更新UI数量
+                drawCountEvent.RaiseEvent(drawDeck.Count,this);
                 var card = cardManager.GetCardObject().GetComponent<Card>();
                 card.InintCardData(currentCard);
                 card.transform.position=deckPosition;
@@ -122,6 +128,9 @@ namespace Cards.Mono
         private void ShuffleDeck()
         {
             discardDeck.Clear();
+            //更新UI显示数量
+            drawCountEvent.RaiseEvent(drawDeck.Count,this);
+            discardCountEvent.RaiseEvent(discardDeck.Count,this);
 
             for (int i = 0; i < drawDeck.Count; i++)
             {
@@ -138,9 +147,14 @@ namespace Cards.Mono
         public void DiscardCard(object obj)
         {
             Card card=obj as Card;
-            discardDeck.Add(card.cardData);
-            handCard.Remove(card);
-            cardManager.ReleaseCardObject(card.gameObject);
+            if (card != null)
+            {
+                discardDeck.Add(card.cardData);
+                handCard.Remove(card);
+                cardManager.ReleaseCardObject(card.gameObject);
+            }
+
+            discardCountEvent.RaiseEvent(discardDeck.Count,this);
             SetCardLayout(0f);
         }
 

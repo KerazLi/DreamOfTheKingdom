@@ -4,10 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89a9e470-03e6-4f27-ad92-72370317cd51" name="Changes" comment="绑定人物UI">
+    <list default="true" id="89a9e470-03e6-4f27-ad92-72370317cd51" name="Changes" comment="制作Gameplay Panel">
+      <change afterPath="$PROJECT_DIR$/Assets/UI/GamePlayPanel.uxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/GamePlayPanel.uxml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/GamePlayPanelUSS.uss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/GamePlayPanelUSS.uss.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DreamOfTheKingdom/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DreamOfTheKingdom/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/HealthBarController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/HealthBarController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/HealthBar.uxml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/HealthBar.uxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CardEffects/DamageEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CardEffects/DamageEffect.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Cards/Mono/Card.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Cards/Mono/Card.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Cards/Mono/CardDeck.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Cards/Mono/CardDeck.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Cards/Mono/CardDragHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Cards/Mono/CardDragHandler.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +38,6 @@
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1d7fdf1f7afe4c58866b88a610a83dc71dda00/84/0625132f/UnityAction`1.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/UnityCode/DreamOfTheKingdom/Assets/GameData/CardData/Attack.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/Player.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Event/Editor/BaseEventSOEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Event/Editor/ObjectEventSOEditor.cs" root0="FORCE_HIGHLIGHTING" />
@@ -42,6 +48,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/Enums.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/SerializeVector3.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal/Runtime/Data/UniversalRenderPipelineAsset.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui/Runtime/UGUI/EventSystem/EventData/PointerEventData.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
@@ -167,7 +174,8 @@
       <workItem from="1731929851319" duration="3574000" />
       <workItem from="1732022446906" duration="5534000" />
       <workItem from="1732120996879" duration="1932000" />
-      <workItem from="1732290072406" duration="2862000" />
+      <workItem from="1732290072406" duration="5043000" />
+      <workItem from="1732303360363" duration="3430000" />
     </task>
     <task id="LOCAL-00001" summary="实现随机地图">
       <option name="closed" value="true" />
@@ -345,7 +353,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732290915179</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="创建USS血条样式">
+      <option name="closed" value="true" />
+      <created>1732293011393</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1732293011393</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -403,7 +419,9 @@
     <MESSAGE value="人物基类代码和怪物素材和spine插件的导入" />
     <MESSAGE value="执行攻击卡牌效果" />
     <MESSAGE value="绑定人物UI" />
-    <option name="LAST_COMMIT_MESSAGE" value="绑定人物UI" />
+    <MESSAGE value="创建USS血条样式" />
+    <MESSAGE value="制作Gameplay Panel" />
+    <option name="LAST_COMMIT_MESSAGE" value="制作Gameplay Panel" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
