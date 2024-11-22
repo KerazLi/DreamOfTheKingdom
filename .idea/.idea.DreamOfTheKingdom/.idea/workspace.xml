@@ -4,21 +4,142 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89a9e470-03e6-4f27-ad92-72370317cd51" name="Changes" comment="人物基类代码和怪物素材和spine插件的导入">
+    <list default="true" id="89a9e470-03e6-4f27-ad92-72370317cd51" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DreamOfTheKingdom/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DreamOfTheKingdom/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Font/SmileySans-Oblique SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Font/SmileySans-Oblique SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameData/CardData/Attack.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameData/CardData/Attack.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameData/Events/IntEvent/EnemyCharacterHP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameData/Events/IntEvent/EnemyCharacterHP.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameData/Events/IntEvent/PlayerCharacterHP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameData/Events/IntEvent/PlayerCharacterHP.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameData/Variable/PlayerHP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameData/Variable/PlayerHP.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Card/Card.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Card/Card.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Boss.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Boss.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/EliteEnemy.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/EliteEnemy.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MinorEnemy.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MinorEnemy.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Cards/Mono/Card.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Cards/Mono/Card.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Cards/Mono/CardDeck.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Cards/Mono/CardDeck.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Cards/Mono/CardDragHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Cards/Mono/CardDragHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Cards/ScriptObject/CardDataSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Cards/ScriptObject/CardDataSO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/Enums.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/Enums.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Character/CharacterBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Character/CharacterBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons/Apple.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons/Apple.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons/Arrow_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons/Arrow_01.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons/Axe_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons/Axe_01.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons/Belt_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons/Belt_01.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons/Book_03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons/Book_03.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons/Chest_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons/Chest_01.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons/Fantasy_Spell_06.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons/Fantasy_Spell_06.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons/Fire_Spell_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons/Fire_Spell_01.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons/Frost_Spell_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons/Frost_Spell_01.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons/Gloves_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons/Gloves_01.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons/Gold_Parts.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons/Gold_Parts.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons/Hammer_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons/Hammer_01.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons/Head_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons/Head_01.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons/Holly_Spell_02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons/Holly_Spell_02.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons/Paper.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons/Paper.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons/Potion.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons/Potion.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons/Ring_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons/Ring_01.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons/Shield_02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons/Shield_02.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons/Sword_02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons/Sword_02.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons/Weapon_Spell_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons/Weapon_Spell_01.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_gray.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_gray/Apple_gray.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_gray/Apple_gray.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_gray/Arrow_01_gray.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_gray/Arrow_01_gray.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_gray/Axe_01_gray.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_gray/Axe_01_gray.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_gray/Belt_01_gray.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_gray/Belt_01_gray.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_gray/Book_03_gray.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_gray/Book_03_gray.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_gray/Chest_01_gray.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_gray/Chest_01_gray.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_gray/Fantasy_Spell_06_gray.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_gray/Fantasy_Spell_06_gray.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_gray/Fire_Spell_01_gray.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_gray/Fire_Spell_01_gray.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_gray/Frost_Spell_01_gray.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_gray/Frost_Spell_01_gray.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_gray/Gloves_01_gray.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_gray/Gloves_01_gray.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_gray/Gold_Parts_gray.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_gray/Gold_Parts_gray.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_gray/Hammer_01_gray.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_gray/Hammer_01_gray.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_gray/Head_01_gray.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_gray/Head_01_gray.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_gray/Holly_Spell_02_gray.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_gray/Holly_Spell_02_gray.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_gray/Paper_gray.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_gray/Paper_gray.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_gray/Potion_gray.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_gray/Potion_gray.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_gray/Ring_01_gray.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_gray/Ring_01_gray.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_gray/Shield_02_gray.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_gray/Shield_02_gray.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_gray/Sword_02_gray.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_gray/Sword_02_gray.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_gray/Weapon_Spell_01_gray.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_gray/Weapon_Spell_01_gray.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_nobg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_nobg/Apple_NOBG.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_nobg/Apple_NOBG.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_nobg/Arrow_01_Nobg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_nobg/Arrow_01_Nobg.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_nobg/Axe_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_nobg/Axe_01.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_nobg/Belt_01_Nobg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_nobg/Belt_01_Nobg.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_nobg/Book_02_NOBG.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_nobg/Book_02_NOBG.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_nobg/Chest_01_Nobg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_nobg/Chest_01_Nobg.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_nobg/Fantasy_Spell_06_no_BG.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_nobg/Fantasy_Spell_06_no_BG.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_nobg/Fire_Spell_01_no_BG.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_nobg/Fire_Spell_01_no_BG.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_nobg/Frost_Spell_01_no_BG.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_nobg/Frost_Spell_01_no_BG.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_nobg/Gloves_01_Nobg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_nobg/Gloves_01_Nobg.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_nobg/Gold_Parts_NOBG.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_nobg/Gold_Parts_NOBG.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_nobg/Hammer_01_Nobg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_nobg/Hammer_01_Nobg.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_nobg/Head_01_Nobg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_nobg/Head_01_Nobg.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_nobg/Holly_Spell_02_no_BG.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_nobg/Holly_Spell_02_no_BG.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_nobg/Paper_Nobg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_nobg/Paper_Nobg.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_nobg/Potion_NOBG.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_nobg/Potion_NOBG.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_nobg/Ring_01_Nobg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_nobg/Ring_01_Nobg.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_nobg/Shield_02_Nobg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_nobg/Shield_02_Nobg.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_nobg/Sword_02_Nobg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_nobg/Sword_02_Nobg.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_nobg/Weapon_Spell_01_no_BG.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalIconBronze/Textures/Icons_nobg/Weapon_Spell_01_no_BG.png.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +163,7 @@
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1d7fdf1f7afe4c58866b88a610a83dc71dda00/84/0625132f/UnityAction`1.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/UnityCode/DreamOfTheKingdom/Assets/GameData/CardData/Attack.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/Player.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Event/Editor/BaseEventSOEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Event/Editor/ObjectEventSOEditor.cs" root0="FORCE_HIGHLIGHTING" />
@@ -175,7 +297,9 @@
       <workItem from="1731605691774" duration="324000" />
       <workItem from="1731606058627" duration="4332000" />
       <workItem from="1731929851319" duration="3574000" />
-      <workItem from="1732022446906" duration="1990000" />
+      <workItem from="1732022446906" duration="5534000" />
+      <workItem from="1732120996879" duration="1932000" />
+      <workItem from="1732290072406" duration="323000" />
     </task>
     <task id="LOCAL-00001" summary="实现随机地图">
       <option name="closed" value="true" />
@@ -337,7 +461,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731931749468</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="执行攻击卡牌效果">
+      <option name="closed" value="true" />
+      <created>1732024470699</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1732024470699</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -393,7 +525,8 @@
     <MESSAGE value="完成攻击牌的拖拽指针" />
     <MESSAGE value="实现洗牌逻辑" />
     <MESSAGE value="人物基类代码和怪物素材和spine插件的导入" />
-    <option name="LAST_COMMIT_MESSAGE" value="人物基类代码和怪物素材和spine插件的导入" />
+    <MESSAGE value="执行攻击卡牌效果" />
+    <option name="LAST_COMMIT_MESSAGE" value="执行攻击卡牌效果" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

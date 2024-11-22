@@ -26,7 +26,7 @@ namespace Cards.Mono
         [HideInInspector]public Vector3 originalPosition;
         [HideInInspector] public Quaternion originalRotation;
         [HideInInspector]public int originalLayerOrder;
-        [HideInInspector] public bool isAniamting;
+        [HideInInspector] public bool isAnimating;
         public Player player;
         [Header("广播事件")] public ObjectEventSO disscardCardEvent;
         
@@ -68,7 +68,7 @@ namespace Cards.Mono
         /// <param name="eventData">事件数据</param>
         public void OnPointerEnter(PointerEventData eventData)
         {
-            if (isAniamting)
+            if (isAnimating)
             {
                 return;
             }
@@ -84,28 +84,47 @@ namespace Cards.Mono
         /// <param name="eventData">事件数据</param>
         public void OnPointerExit(PointerEventData eventData)
         {
-            if (isAniamting)
+            // 检查是否正在执行动画，如果正在执行，则不进行后续操作
+            if (isAnimating)
             {
                 return;
             }
+            
+            // 重置卡片的Transform组件，恢复其默认位置和状态
             RestCardTransform();
         }
         
+        
         /// <summary>
-        /// 重置卡片的位置、旋转和层级顺序到原始状态
+        /// 重置卡片的位置、旋转和排序顺序到其原始状态。
+        /// 此方法用于在游戏或应用中恢复卡片的视觉状态至其初始位置和外观。
         /// </summary>
         public void RestCardTransform()
         {
-            transform.SetPositionAndRotation(originalPosition,originalRotation);
+            // 重置卡片的位置和旋转到其原始值。
+            // 这是恢复卡片视觉状态至其初始位置和方向的关键步骤。
+            transform.SetPositionAndRotation(originalPosition, originalRotation);
+            
+            // 恢复卡片的排序顺序到其原始值。
+            // 这确保了卡片在渲染时的层级关系与初始状态一致。
             GetComponent<SortingGroup>().sortingOrder = originalLayerOrder;
         }
 
+        /// <summary>
+        /// 执行卡牌效果
+        /// </summary>
+        /// <param name="from">使用卡牌的角色</param>
+        /// <param name="target">卡牌效果的目标角色</param>
         public void ExecuteCardEffects(CharacterBase from,CharacterBase target)
         {
             //TODO:减少能量，回收卡牌
+            // 触发弃牌事件，通知所有订阅该事件的监听者
             disscardCardEvent.RaiseEvent(this,this);
+            
+            // 遍历卡片效果列表，执行每个效果
             foreach (var effect in cardData.CardEffects)
             {
+                // 执行卡片效果，from 表示效果的来源，target 表示效果的目标
                 effect.Excute(from, target);
             }
         }

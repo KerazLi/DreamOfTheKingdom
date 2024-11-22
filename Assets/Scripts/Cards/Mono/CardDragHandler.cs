@@ -39,7 +39,7 @@ namespace Cards.Mono
         {
             if (canMove &&Camera.main!=null)
             {
-                currentCard.isAniamting = true;
+                currentCard.isAnimating = true;
                 Vector3 screenPos = new(Input.mousePosition.x, Input.mousePosition.y, 10);
                 
                 Vector3 worldPos = Camera.main.ScreenToWorldPoint(screenPos);
@@ -79,7 +79,7 @@ namespace Cards.Mono
             else
             {
                 currentCard.RestCardTransform();
-                currentCard.isAniamting = false;
+                currentCard.isAnimating = false;
             }
         }
     }

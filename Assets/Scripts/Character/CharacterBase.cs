@@ -14,7 +14,7 @@ public class CharacterBase : MonoBehaviour
         get => hp.maxValue;
     }
 
-    private bool isDead;
+    public bool isDead;
 
     protected virtual void Awake()
     {

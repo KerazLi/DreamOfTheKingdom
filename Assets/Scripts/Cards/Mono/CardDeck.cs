@@ -107,7 +107,7 @@ namespace Cards.Mono
                 currentCard.transform.DOScale(Vector3.one, 0.2f).SetDelay(delay).onComplete= () =>
                 {
                     currentCard.transform.DOMove(cardTransform.pos, 0.5f).onComplete =
-                        () => currentCard.isAniamting = false;
+                        () => currentCard.isAnimating = false;
                     currentCard.transform.DORotateQuaternion(cardTransform.rotation, 0.5f);
                 };
             
