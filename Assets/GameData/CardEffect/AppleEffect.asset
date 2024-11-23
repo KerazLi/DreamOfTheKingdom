@@ -9,10 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a860f93f549d7bc44abfb63c3e5b7135, type: 3}
-  m_Name: PlayerHP
+  m_Script: {fileID: 11500000, guid: dfff5b9a792152f408878ca53429b3af, type: 3}
+  m_Name: AppleEffect
   m_EditorClassIdentifier: 
-  maxValue: 60
-  currentValue: 42
-  ValueChangedEvent: {fileID: 11400000, guid: 4b5751ef2dfadd44cb3633b033c7ba92, type: 2}
-  description: "\u73A9\u5BB6HP"
+  value: 12
+  targetType: 0

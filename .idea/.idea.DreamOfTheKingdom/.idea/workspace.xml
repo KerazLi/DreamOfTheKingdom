@@ -4,34 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89a9e470-03e6-4f27-ad92-72370317cd51" name="Changes" comment="完成回合的转换">
+    <list default="true" id="89a9e470-03e6-4f27-ad92-72370317cd51" name="Changes" comment="Buff素材导入">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DreamOfTheKingdom/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DreamOfTheKingdom/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/CardData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/CardData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Scene.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Scene.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Font/SmileySans-Oblique SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Font/SmileySans-Oblique SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Spine Animations/Bubbles/Bubbles_Atlas.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Spine Animations/Bubbles/Bubbles_Atlas.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Spine Animations/Bubbles/Bubbles_Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Spine Animations/Bubbles/Bubbles_Material.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Spine Animations/EggKnight/EggKnight_Atlas.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Spine Animations/EggKnight/EggKnight_Atlas.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Spine Animations/EggKnight/EggKnight_Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Spine Animations/EggKnight/EggKnight_Material.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Spine Animations/Fish/EliteEnemy_Atlas.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Spine Animations/Fish/EliteEnemy_Atlas.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Spine Animations/Fish/EliteEnemy_Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Spine Animations/Fish/EliteEnemy_Material.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Spine Animations/JuicerKnight/JuicerKnight_Atlas.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Spine Animations/JuicerKnight/JuicerKnight_Atlas.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Spine Animations/JuicerKnight/JuicerKnight_Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Spine Animations/JuicerKnight/JuicerKnight_Material.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Spine Animations/LaundryKnight/LaundryKnight_Atlas.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Spine Animations/LaundryKnight/LaundryKnight_Atlas.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Spine Animations/LaundryKnight/LaundryKnight_Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Spine Animations/LaundryKnight/LaundryKnight_Material.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Spine Animations/Mop/Boss_Atlas.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Spine Animations/Mop/Boss_Atlas.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Spine Animations/Mop/Boss_Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Spine Animations/Mop/Boss_Material.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Spine Animations/Pig Hammer/MinorEnemy_Atlas.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Spine Animations/Pig Hammer/MinorEnemy_Atlas.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Spine Animations/Pig Hammer/MinorEnemy_Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Spine Animations/Pig Hammer/MinorEnemy_Material.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Spine Animations/PlateKnight/PlateKnight_Atlas.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Spine Animations/PlateKnight/PlateKnight_Atlas.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Spine Animations/PlateKnight/PlateKnight_Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Spine Animations/PlateKnight/PlateKnight_Material.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Spine Animations/Player/Player_Atlas.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Spine Animations/Player/Player_Atlas.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Spine Animations/Player/Player_Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Spine Animations/Player/Player_Material.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Spine Animations/Vacuum/Vacuum_Atlas.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Spine Animations/Vacuum/Vacuum_Atlas.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Spine Animations/Vacuum/Vacuum_Vacuum.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Spine Animations/Vacuum/Vacuum_Vacuum.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Spine Animations/Vacuum/Vacuum_Vacuum_2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Spine Animations/Vacuum/Vacuum_Vacuum_2.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Room/BackToMap.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Room/BackToMap.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Setting/Panel Settings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Setting/Panel Settings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameData/CardLibrary/NewGameLibrary.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameData/CardLibrary/NewGameLibrary.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameData/Variable/PlayerHP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameData/Variable/PlayerHP.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MinorEnemy.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MinorEnemy.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Character/CharacterBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Character/CharacterBase.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +37,8 @@
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1d7fdf1f7afe4c58866b88a610a83dc71dda00/84/0625132f/UnityAction`1.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/UnityCode/DreamOfTheKingdom/Assets/Scripts/Cards/Mono/CardDeck.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/李运超/OneDrive/Desktop/code/DreamOfTheKingdom/Assets/Prefab/Room/BackToMap.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CardEffects/HealthEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/Player.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Event/Editor/BaseEventSOEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Event/Editor/ObjectEventSOEditor.cs" root0="FORCE_HIGHLIGHTING" />
@@ -198,6 +181,7 @@
       <workItem from="1732382067991" duration="7557000" />
       <workItem from="1732399941154" duration="88000" />
       <workItem from="1732400609579" duration="381000" />
+      <workItem from="1732401889262" duration="1357000" />
     </task>
     <task id="LOCAL-00001" summary="实现随机地图">
       <option name="closed" value="true" />
@@ -407,7 +391,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732382771893</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Buff素材导入">
+      <option name="closed" value="true" />
+      <created>1732401924635</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1732401924635</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -469,7 +461,8 @@
     <MESSAGE value="制作Gameplay Panel" />
     <MESSAGE value="绑定Gameplay Panel数据并修改了攻击卡牌可以任意使用对象的bug" />
     <MESSAGE value="完成回合的转换" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成回合的转换" />
+    <MESSAGE value="Buff素材导入" />
+    <option name="LAST_COMMIT_MESSAGE" value="Buff素材导入" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -8,6 +8,7 @@ public class CharacterBase : MonoBehaviour
     protected Animator animator;
     public IntVariable hp;
     public IntVariable defense;
+    public GameObject buff, debuff;
     public int CurrentHP { get => hp.currentValue;set => hp.SetValue(value);}
 
     private int MaxHP
@@ -51,5 +52,12 @@ public class CharacterBase : MonoBehaviour
     public void RestDefense()
     {
         defense.SetValue(0);
+    }
+
+    public void HealHealth(int amount)
+    {
+        CurrentHP += amount;
+        CurrentHP=Math.Min(CurrentHP,MaxHP);
+        buff.SetActive(true);
     }
 }

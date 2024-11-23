@@ -15,6 +15,12 @@ MonoBehaviour:
   m_GroupName: CardData
   m_GUID: 5074321e080e99247b0cefa8b9f30fc9
   m_SerializeEntries:
+  - m_GUID: 2b2a95d9c4fe21f4a889651e52066c54
+    m_Address: Apple
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CardData
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4e5b08a05adea4f418bbff65bb5a3c06
     m_Address: AttackBuff
     m_ReadOnly: 0
