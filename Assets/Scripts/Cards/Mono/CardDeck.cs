@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Cards.ScriptObject;
+using Character;
 using DG.Tweening;
 using Event.ScriptObject;
 using Manager;
@@ -78,6 +79,8 @@ namespace Cards.Mono
         {
             for (int i = 0; i < amount; i++)
             {
+                CardDataSO currentCard=drawDeck[0];
+                drawDeck.RemoveAt(0);
                 if (drawDeck.Count==0)
                 {
                     foreach (var item in discardDeck)
@@ -86,8 +89,7 @@ namespace Cards.Mono
                     }
                     ShuffleDeck();
                 }
-                CardDataSO currentCard=drawDeck[0];
-                drawDeck.RemoveAt(0);
+                
                 //更新UI数量
                 drawCountEvent.RaiseEvent(drawDeck.Count,this);
                 var card = cardManager.GetCardObject().GetComponent<Card>();
@@ -116,6 +118,9 @@ namespace Cards.Mono
             
                 // 设置当前卡片的位置为计算得到的位置
                 //currentCard.transform.SetPositionAndRotation(cardTransform.pos, cardTransform.rotation);
+                //获取卡牌能量
+                currentCard.UpdateCardState();
+                
             
 
                 //卡牌的缩放为1

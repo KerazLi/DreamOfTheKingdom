@@ -21,9 +21,14 @@ namespace Cards.Mono
 
         public void OnBeginDrag(PointerEventData eventData)
         {
+            if (!currentCard.isAvailiable)
+            {
+                return;
+            }
             switch (currentCard.cardData.cardType)
             {
                 case CardType.Attack:
+                    canMove = false;
                     currentArrow = Instantiate(arrowPrefab, transform.position, Quaternion.identity);
                     break;
                 case CardType.Defense:
@@ -37,8 +42,13 @@ namespace Cards.Mono
 
         public void OnDrag(PointerEventData eventData)
         {
+            if (!currentCard.isAvailiable)
+            {
+                return;
+            }
+            
             // 检查是否可以移动并且主相机存在
-            if (canMove && Camera.main != null)
+            if (canMove)
             {
                 // 设置当前卡片为正在动画状态
                 currentCard.isAnimating = true;
@@ -54,9 +64,10 @@ namespace Cards.Mono
 
                 // 如果世界坐标的y值大于1，则可以执行某些操作（例如：放置卡片）
                 canExecute = worldPos.y > 1f;
+            }
 
 
-                // 如果鼠标没有悬停在任何对象上，则直接返回
+            // 如果鼠标没有悬停在任何对象上，则直接返回
                 if (eventData.pointerEnter == null)
                 {
                     return;
@@ -70,11 +81,7 @@ namespace Cards.Mono
                     target = eventData.pointerEnter.GetComponent<CharacterBase>();
                     return;
                 }
-            }
-            else
-            {
-                throw new ArgumentException("没有主摄像机");
-            }
+            
 
 
         }
@@ -85,6 +92,10 @@ namespace Cards.Mono
         /// <param name="eventData">拖拽事件的数据。</param>
         public void OnEndDrag(PointerEventData eventData)
         {
+            if (!currentCard.isAvailiable)
+            {
+                return;
+            }
             // 销毁当前箭头对象，如果存在
             if (currentArrow!=null)
             {

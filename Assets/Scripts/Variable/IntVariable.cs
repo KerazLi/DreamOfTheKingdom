@@ -15,7 +15,7 @@ namespace Variable
         public void SetValue(int value)
         {
             currentValue = value;
-            ValueChangedEvent.RaiseEvent(currentValue, this);
+            ValueChangedEvent?.RaiseEvent(currentValue, this);
         }
     }
 }

@@ -1,6 +1,7 @@
 using System;
 using Cards.ScriptObject;
 using Character;
+using Event.ScriptObject;
 using TMPro;
 using Unity.Mathematics;
 using UnityEngine;
@@ -14,6 +15,7 @@ namespace Cards.Mono
     {
         // 定义卡片的视觉组件和文本信息
         [Header("组件")] 
+        
         public SpriteRenderer cardSprite;
         
         public TextMeshPro costText, descriptionText, typeText;
@@ -27,8 +29,11 @@ namespace Cards.Mono
         [HideInInspector] public Quaternion originalRotation;
         [HideInInspector]public int originalLayerOrder;
         [HideInInspector] public bool isAnimating;
-        public Player player;
-        [Header("广播事件")] public ObjectEventSO disscardCardEvent;
+        [HideInInspector] public bool isAvailiable;
+        [HideInInspector]public Player player;
+        [Header("广播事件")] 
+        public ObjectEventSO disscardCardEvent;
+        public IntEventSO costEvent;
         
         /// <summary>
         /// 初始化卡片数据
@@ -121,7 +126,8 @@ namespace Cards.Mono
         /// <param name="target">卡牌效果的目标角色</param>
         public void ExecuteCardEffects(CharacterBase from,CharacterBase target)
         {
-            //TODO:减少能量，回收卡牌
+            //减少能量，回收卡牌
+            costEvent.RaiseEvent(cardData.cost,this);
             // 触发弃牌事件，通知所有订阅该事件的监听者
             disscardCardEvent.RaiseEvent(this,this);
             
@@ -131,6 +137,12 @@ namespace Cards.Mono
                 // 执行卡片效果，from 表示效果的来源，target 表示效果的目标
                 effect.Excute(from, target);
             }
+        }
+
+        public void UpdateCardState()
+        {
+            isAvailiable=cardData.cost<=player.CurrentMana;
+            costText.color=isAvailiable?Color.white:Color.red;
         }
 
 

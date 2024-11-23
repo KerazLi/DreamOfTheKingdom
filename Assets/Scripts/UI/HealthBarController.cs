@@ -14,6 +14,8 @@ namespace UI
         private ProgressBar healthBar;
 
         private CharacterBase currentChararcterHP;
+        private VisualElement defenseElement;
+        private Label defenseAmountLabel;
 
         private void Awake()
         {
@@ -36,6 +38,8 @@ namespace UI
         {
             healthBarDocument = GetComponent<UIDocument>();
             healthBar = healthBarDocument.rootVisualElement.Q<ProgressBar>("HealthBar");
+            defenseElement= healthBarDocument.rootVisualElement.Q<VisualElement>("Defense");
+            defenseAmountLabel = defenseElement.Q<Label>("DefenseAmount");
             healthBar.highValue = currentChararcterHP.maxHp;
             MoveToWorldPosition(healthBar, HealthBarTransform.position,Vector2.zero);
         }
@@ -62,6 +66,8 @@ namespace UI
                 healthBar.RemoveFromClassList("middleHealth");
                 healthBar.AddToClassList(currentChararcterHP.CurrentHP<=currentChararcterHP.maxHp/3?"lowHealth":currentChararcterHP.CurrentHP<=currentChararcterHP.maxHp/2?"middleHealth":"highHealth");
             }
+            defenseElement.style.display=currentChararcterHP.defense.currentValue>0?DisplayStyle.Flex:DisplayStyle.None;
+            defenseAmountLabel.text=currentChararcterHP.defense.currentValue.ToString();
             
             
             

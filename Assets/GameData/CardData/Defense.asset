@@ -17,3 +17,5 @@ MonoBehaviour:
   cost: 1
   cardType: 1
   cardDescription: "\u589E\u52A06\u70B9\u9632\u5FA1\u503C"
+  CardEffects:
+  - {fileID: 11400000, guid: 11436148e8bdd114bb0599741404d5e9, type: 2}

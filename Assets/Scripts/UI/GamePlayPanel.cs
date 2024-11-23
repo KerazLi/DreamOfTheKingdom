@@ -38,5 +38,22 @@ namespace UI
         {
             discardAmountLabel.text = amount.ToString();
         }
+
+        public void OnEnemyTurnBegin()
+        {
+            endTurnButton.SetEnabled(false);
+            turnLabel.text = "敌方回合";
+            turnLabel.style.color = Color.red;
+        }
+        public void OnPlayerTurnBegin()
+        {
+            endTurnButton.SetEnabled(true);
+            turnLabel.text = "玩家回合";
+            turnLabel.style.color = Color.white;
+        }
+        public void UpdateEnergyAmount(int amount)
+        {
+            energyAmountLabel.text = amount.ToString();
+        }
     }
 }

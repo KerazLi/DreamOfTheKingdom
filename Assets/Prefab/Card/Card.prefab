@@ -290,9 +290,10 @@ MonoBehaviour:
   originalPosition: {x: 0, y: 0, z: 0}
   originalRotation: {x: 0, y: 0, z: 0, w: 0}
   originalLayerOrder: 0
-  isAniamting: 0
+  isAnimating: 0
   player: {fileID: 0}
   disscardCardEvent: {fileID: 11400000, guid: 59fe3078af4548147b105f4bc8821a6b, type: 2}
+  costEvent: {fileID: 11400000, guid: 5f90a03d72600144480e418963646a30, type: 2}
 --- !u!114 &2697207611085152187
 MonoBehaviour:
   m_ObjectHideFlags: 0
