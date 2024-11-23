@@ -32,7 +32,7 @@ namespace Cards.Mono
         private void Start()
         {
             InitializeDeck();
-            DrawCard(3);
+            //DrawCard(3);
         }
     
         /// <summary>
@@ -60,7 +60,16 @@ namespace Cards.Mono
         {
             DrawCard(1);
         }
-    
+        
+        /// <summary>
+        /// 新回合的抽牌,事件监听
+        /// </summary>
+        public void NewTurnDrawCard()
+        {
+            DrawCard(4);
+        }
+
+
         /// <summary>
         /// 从抽牌堆中抽牌的方法
         /// </summary>
@@ -156,6 +165,17 @@ namespace Cards.Mono
 
             discardCountEvent.RaiseEvent(discardDeck.Count,this);
             SetCardLayout(0f);
+        }
+
+        public void OnPlayerTurnEnd()
+        {
+            foreach (var item in handCard)
+            {
+               discardDeck.Add(item.cardData);
+               cardManager.ReleaseCardObject(item.gameObject);
+            }
+            handCard.Clear();
+            discardCountEvent.RaiseEvent(discardDeck.Count,this);
         }
 
 
