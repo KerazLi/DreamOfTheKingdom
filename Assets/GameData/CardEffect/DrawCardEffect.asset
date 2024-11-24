@@ -9,10 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a860f93f549d7bc44abfb63c3e5b7135, type: 3}
-  m_Name: EnemyStrenthRound
+  m_Script: {fileID: 11500000, guid: 9ae66e8e459a1f4468074ce07624c3f1, type: 3}
+  m_Name: DrawCardEffect
   m_EditorClassIdentifier: 
-  maxValue: 0
-  currentValue: 0
-  ValueChangedEvent: {fileID: 11400000, guid: 9fa9e45f60e11c048a5b015c1e13d0b7, type: 2}
-  description: 
+  value: 2
+  targetType: 0
+  drawCardEvent: {fileID: 11400000, guid: 753f8ea1c0d15b345bb7de43d1b0a064, type: 2}

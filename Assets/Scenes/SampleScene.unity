@@ -1166,7 +1166,7 @@ MonoBehaviour:
   disableRenderingOnOverride: 1
   updateTiming: 1
   unscaledTime: 0
-  _animationName: 
+  _animationName: debuff
   loop: 1
   timeScale: 1
 --- !u!23 &1436686946
@@ -1435,6 +1435,7 @@ GameObject:
   - component: {fileID: 1633332980}
   - component: {fileID: 1633332981}
   - component: {fileID: 1633332982}
+  - component: {fileID: 1633332983}
   m_Layer: 0
   m_Name: CardDeck
   m_TagString: Untagged
@@ -1579,6 +1580,34 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: Cards.Mono.CardDeck, Assembly-CSharp
         m_MethodName: OnPlayerTurnEnd
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1633332983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633332976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f795b7ec74424a388e6f8c4a9a68ffc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventSO: {fileID: 11400000, guid: 753f8ea1c0d15b345bb7de43d1b0a064, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1633332977}
+        m_TargetAssemblyTypeName: Cards.Mono.CardDeck, Assembly-CSharp
+        m_MethodName: DrawCard
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

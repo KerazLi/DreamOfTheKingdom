@@ -546,7 +546,7 @@ MonoBehaviour:
   disableRenderingOnOverride: 1
   updateTiming: 1
   unscaledTime: 0
-  _animationName: 
+  _animationName: debuff
   loop: 1
   timeScale: 1
 --- !u!23 &1278569810
@@ -615,6 +615,7 @@ GameObject:
   - component: {fileID: 1742775543}
   - component: {fileID: 1742775545}
   - component: {fileID: 1742775544}
+  - component: {fileID: 1742775546}
   m_Layer: 7
   m_Name: MinorEnemy
   m_TagString: Enemy
@@ -654,7 +655,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHp: 50
   hp: {fileID: 11400000, guid: 8a7571d1f2e8c6543a8f2fe8f0bbba11, type: 2}
-  buffRound: {fileID: 11400000, guid: 4490400f5b869b043916ce18bea7a79d, type: 2}
+  buffRound: {fileID: 11400000, guid: b05a1b5fc31b0be429db20389bd9a978, type: 2}
   defense: {fileID: 11400000, guid: 7be42e82406a18347824d809954575bb, type: 2}
   buff: {fileID: 1068135484}
   debuff: {fileID: 1278569807}
@@ -741,6 +742,34 @@ MonoBehaviour:
   m_WorldSpaceSizeMode: 1
   m_WorldSpaceWidth: 1920
   m_WorldSpaceHeight: 1080
+--- !u!114 &1742775546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1742775540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f795b7ec74424a388e6f8c4a9a68ffc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventSO: {fileID: 11400000, guid: 9fa9e45f60e11c048a5b015c1e13d0b7, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1742775546}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &2042022073
 PrefabInstance:
   m_ObjectHideFlags: 0

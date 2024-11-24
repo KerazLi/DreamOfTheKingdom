@@ -75,7 +75,7 @@ namespace Cards.Mono
         /// 从抽牌堆中抽牌的方法
         /// </summary>
         /// <param name="amount">要抽取的卡片数量</param>
-        private void DrawCard(int amount)
+        public void DrawCard(int amount)
         {
             for (int i = 0; i < amount; i++)
             {
