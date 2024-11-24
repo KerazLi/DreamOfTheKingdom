@@ -171,9 +171,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHp: 60
   hp: {fileID: 11400000, guid: 7f5edb736c108d8479aeaf05aafa74ec, type: 2}
+  buffRound: {fileID: 11400000, guid: 2f80b52cbfbe8fb47a4da68b754a4c63, type: 2}
   defense: {fileID: 11400000, guid: 313cf57d291570345b983aa43cae2085, type: 2}
   buff: {fileID: 2142193112}
   debuff: {fileID: 1436686943}
+  baseStrenth: 1
+  strengthEffect: 0.5
   isDead: 0
   playerMana: {fileID: 11400000, guid: 035d5cb824a915c4c9938c2fd9ddded9, type: 2}
   maxMana: 3
@@ -209,6 +212,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HealthBarTransform: {fileID: 1050534564}
+  buffIcon: {fileID: 21300000, guid: 810448b82870c45058f8b2de5423274a, type: 3}
+  debuffIcon: {fileID: 21300000, guid: d7f03361f8c0a4e1293a0b3eb59d0320, type: 3}
 --- !u!114 &173557191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,6 +245,18 @@ MonoBehaviour:
       - m_Target: {fileID: 173557188}
         m_TargetAssemblyTypeName: CharacterBase, Assembly-CSharp
         m_MethodName: RestDefense
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 173557188}
+        m_TargetAssemblyTypeName: Character.CharacterBase, Assembly-CSharp
+        m_MethodName: UpdateStrengthRound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

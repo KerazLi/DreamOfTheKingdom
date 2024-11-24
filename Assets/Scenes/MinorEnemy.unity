@@ -654,9 +654,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHp: 50
   hp: {fileID: 11400000, guid: 8a7571d1f2e8c6543a8f2fe8f0bbba11, type: 2}
+  buffRound: {fileID: 11400000, guid: 4490400f5b869b043916ce18bea7a79d, type: 2}
   defense: {fileID: 11400000, guid: 7be42e82406a18347824d809954575bb, type: 2}
   buff: {fileID: 1068135484}
   debuff: {fileID: 1278569807}
+  baseStrenth: 1
+  strengthEffect: 0.5
   isDead: 0
 --- !u!61 &1742775543
 BoxCollider2D:
@@ -717,6 +720,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HealthBarTransform: {fileID: 184906051}
+  buffIcon: {fileID: 21300000, guid: 810448b82870c45058f8b2de5423274a, type: 3}
+  debuffIcon: {fileID: 21300000, guid: d7f03361f8c0a4e1293a0b3eb59d0320, type: 3}
 --- !u!114 &1742775545
 MonoBehaviour:
   m_ObjectHideFlags: 0

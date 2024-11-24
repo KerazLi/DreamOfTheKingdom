@@ -1,4 +1,5 @@
 using System;
+using Character;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -16,6 +17,11 @@ namespace UI
         private CharacterBase currentChararcterHP;
         private VisualElement defenseElement;
         private Label defenseAmountLabel;
+        private VisualElement buffElement;
+        private Label buffRound;
+        [Header("Spirte")]
+        public Sprite buffIcon;
+        public Sprite debuffIcon;
 
         private void Awake()
         {
@@ -42,6 +48,9 @@ namespace UI
             defenseAmountLabel = defenseElement.Q<Label>("DefenseAmount");
             healthBar.highValue = currentChararcterHP.maxHp;
             MoveToWorldPosition(healthBar, HealthBarTransform.position,Vector2.zero);
+            buffElement = healthBarDocument.rootVisualElement.Q<VisualElement>("Buff");
+            buffRound = buffElement.Q<Label>("BuffAmount");
+            buffElement.style.display = DisplayStyle.None;
         }
         
         private void Update()
@@ -68,7 +77,9 @@ namespace UI
             }
             defenseElement.style.display=currentChararcterHP.defense.currentValue>0?DisplayStyle.Flex:DisplayStyle.None;
             defenseAmountLabel.text=currentChararcterHP.defense.currentValue.ToString();
-            
+            buffElement.style.display=currentChararcterHP.buffRound.currentValue>0?DisplayStyle.Flex:DisplayStyle.None;
+            buffRound.text=currentChararcterHP.buffRound.currentValue.ToString();
+            buffElement.style.backgroundImage=currentChararcterHP.baseStrenth>1?new StyleBackground(buffIcon):new StyleBackground(debuffIcon);
             
             
         }
