@@ -1,3 +1,4 @@
+using Event.ScriptObject;
 using UnityEditor;
 using UnityEngine;
 [CustomEditor(typeof(ObjectEventSO))]

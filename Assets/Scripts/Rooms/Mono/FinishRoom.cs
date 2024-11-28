@@ -1,4 +1,5 @@
 using System;
+using Event.ScriptObject;
 using UnityEngine;
 
 public class FinishRoom : MonoBehaviour

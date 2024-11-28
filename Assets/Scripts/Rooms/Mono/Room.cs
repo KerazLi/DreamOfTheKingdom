@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Event.ScriptObject;
 using UnityEngine;
 using Utilities;
 
