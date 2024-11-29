@@ -4,10 +4,12 @@ using Character;
 using Event.ScriptObject;
 using TMPro;
 using Unity.Mathematics;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Rendering;
 using Utilities;
+using Object = UnityEngine.Object;
 
 namespace Cards.Mono
 {
@@ -31,10 +33,21 @@ namespace Cards.Mono
         [HideInInspector] public bool isAnimating;
         [HideInInspector] public bool isAvailiable;
         [HideInInspector]public Player player;
+        private BoxCollider2D _boxCollider2D;
+        private float offset;
+        private float size;
+        public Object entry;
         [Header("广播事件")] 
         public ObjectEventSO disscardCardEvent;
         public IntEventSO costEvent;
-        
+
+        private void Awake()
+        {
+            _boxCollider2D = GetComponent<BoxCollider2D>();
+            offset=_boxCollider2D.offset.y;
+            size=_boxCollider2D.size.y;
+        }
+
         /// <summary>
         /// 初始化卡片数据
         /// </summary>
@@ -80,7 +93,10 @@ namespace Cards.Mono
             }
             
             // 将游戏对象的位置设置为原始位置加上一个单位向上的偏移量
-            transform.position = originalPosition + Vector3.up;
+            transform.position = new Vector3(originalPosition.x, originalPosition.y , -1f);
+            entry.GameObject().transform.position=originalPosition + Vector3.up;
+            _boxCollider2D.size+=Vector2.up;
+            _boxCollider2D.offset+=Vector2.up/2;
             // 将游戏对象的旋转设置为单位四元数，即没有旋转
             transform.rotation = quaternion.identity;
             // 获取游戏对象的SortingGroup组件，并将排序顺序设置为20
@@ -112,7 +128,10 @@ namespace Cards.Mono
         {
             // 重置卡片的位置和旋转到其原始值。
             // 这是恢复卡片视觉状态至其初始位置和方向的关键步骤。
-            transform.SetPositionAndRotation(originalPosition, originalRotation);
+            transform.position=originalPosition;
+            entry.GameObject().transform.SetPositionAndRotation(originalPosition, originalRotation);
+            _boxCollider2D.size=new Vector2(_boxCollider2D.size.x,size);
+            _boxCollider2D.offset=new Vector2(_boxCollider2D.offset.x,offset);
             
             // 恢复卡片的排序顺序到其原始值。
             // 这确保了卡片在渲染时的层级关系与初始状态一致。
@@ -147,4 +166,6 @@ namespace Cards.Mono
 
 
     }
+
+    
 }

@@ -51,5 +51,8 @@ TagManager:
   - name: Front
     uniqueID: 2309017939
     locked: 0
+  - name: Card
+    uniqueID: 3639763187
+    locked: 0
   m_RenderingLayers:
   - Default

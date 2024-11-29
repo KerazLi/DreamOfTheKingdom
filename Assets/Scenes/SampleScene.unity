@@ -421,7 +421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a13384ac7e841024bb2208669753c097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isHorizonal: 0
+  isHorizonal: 1
   cardMaxWidth: 7
   cardSpacing: 2
   cardPositions: []
