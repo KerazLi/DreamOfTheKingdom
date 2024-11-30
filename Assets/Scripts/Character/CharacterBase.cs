@@ -1,4 +1,5 @@
 using System;
+using Event.ScriptObject;
 using UnityEngine;
 using Utilities;
 using Variable;
@@ -16,6 +17,7 @@ namespace Character
         public float baseStrenth = 1f;
         public float strengthEffect = 0.5f;
         public int CurrentHP { get => hp.currentValue;set => hp.SetValue(value);}
+        [Header("广播")] public ObjectEventSO characterDeadEvent;
 
         private int MaxHP
         {
@@ -50,6 +52,7 @@ namespace Character
                 CurrentHP = 0;
                 isDead = true;
                 animator.SetBool(VariableTool.IsDead, isDead);
+                characterDeadEvent.RaiseEvent(this,this);
             }
         }
         

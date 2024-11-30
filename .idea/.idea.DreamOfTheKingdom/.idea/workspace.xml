@@ -4,22 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89a9e470-03e6-4f27-ad92-72370317cd51" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/VariableTool.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/VariableTool.cs.meta" afterDir="false" />
+    <list default="true" id="89a9e470-03e6-4f27-ad92-72370317cd51" name="Changes" comment="完成敌人动画，修改了一些卡牌bug">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DreamOfTheKingdom/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DreamOfTheKingdom/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Font/SmileySans-Oblique SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Font/SmileySans-Oblique SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameData/CardLibrary/NewGameLibrary.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameData/CardLibrary/NewGameLibrary.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameData/Enemy/EnemyAction/MinorEnemyAction.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameData/Enemy/EnemyAction/MinorEnemyAction.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameData/Variable/EnemyDefense.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameData/Variable/EnemyDefense.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameData/Variable/EnemyHP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameData/Variable/EnemyHP.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Spine Animations/PlateKnight/Pzknight_Controller.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Spine Animations/PlateKnight/Pzknight_Controller.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameData/Enemy/EnemyEffect/EnemyDamageEffect.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameData/Enemy/EnemyEffect/EnemyDamageEffect.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameData/Events/AfterLoadRoomEvent.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameData/Events/AfterLoadRoomEvent.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameData/Variable/PlayerHP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameData/Variable/PlayerHP.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Card/Card.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Card/Card.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MinorEnemy.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MinorEnemy.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CardEffects/DamageEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CardEffects/DamageEffect.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CardEffects/HealthEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CardEffects/HealthEffect.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Cards/Mono/CardDeck.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Cards/Mono/CardDeck.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Character/CharacterBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Character/CharacterBase.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Character/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Character/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Character/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Character/Player.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Character/PlayerAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Character/PlayerAnimation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/SceneLoadManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/SceneLoadManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/TurnBaseManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/TurnBaseManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -198,7 +198,7 @@
       <workItem from="1732879077534" duration="104000" />
       <workItem from="1732879193210" duration="4041000" />
       <workItem from="1732978954497" duration="4726000" />
-      <workItem from="1732983853413" duration="4151000" />
+      <workItem from="1732983853413" duration="9132000" />
     </task>
     <task id="LOCAL-00001" summary="实现随机地图">
       <option name="closed" value="true" />
@@ -456,7 +456,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732981486486</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="完成敌人动画，修改了一些卡牌bug">
+      <option name="closed" value="true" />
+      <created>1732988831236</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1732988831236</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -495,7 +503,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="房间进出逻辑" />
     <MESSAGE value="导入字体" />
     <MESSAGE value="制作卡牌的预制体" />
     <MESSAGE value="完成卡牌的代码制作" />
@@ -520,7 +527,8 @@
     <MESSAGE value="完成人物动画" />
     <MESSAGE value="修改相邻卡牌碰撞体的bug" />
     <MESSAGE value="完成敌人意图和攻击" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成敌人意图和攻击" />
+    <MESSAGE value="完成敌人动画，修改了一些卡牌bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成敌人动画，修改了一些卡牌bug" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -1,5 +1,9 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using Cards.ScriptObject;
+using Character;
+using Event.ScriptObject;
 using UnityEngine;
 using Utilities;
 
@@ -14,6 +18,11 @@ namespace Manager
         /// 地图布局的单例对象，用于存储和管理地图的布局数据。
         /// </summary>
         public MapLayoutSO mapLayoutSO;
+
+        public List<Enemy> aliveEnemyList=new ();
+        [Header("广播")]
+        public ObjectEventSO gameWinEvent;
+        public ObjectEventSO gameOverEvent;
 
         
 
@@ -45,7 +54,40 @@ namespace Manager
                 var linkRoom = mapLayoutSO.mapRoomDatasList.Find(r => r.column == link.x && r.line == link.y); 
                 linkRoom.roomState = RoomState.Attainable;
             }
+            aliveEnemyList.Clear();
         }
-        
+
+        public void OnRoomLoadEvent(object obj)
+        {
+            var enemies = FindObjectsByType<Enemy>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+            foreach (var enemy in enemies)
+            {
+                aliveEnemyList.Add(enemy);
+            }
+        }
+
+        public void OnChararcterDeadEvent(object character)
+        {
+            if (character is Player)
+            {
+                StartCoroutine(EventDelayAction(gameOverEvent));
+            }
+            
+            if (character is Enemy)
+            {
+                aliveEnemyList.Remove(character as Enemy);
+                if (aliveEnemyList.Count==0)
+                {
+                    StartCoroutine(EventDelayAction(gameWinEvent));
+                }
+            }
+        }
+
+        IEnumerator EventDelayAction(ObjectEventSO eventSo)
+        {
+            yield return new WaitForSeconds(1.5f);
+            eventSo.RaiseEvent(null,this);
+        }
+
     }
 }

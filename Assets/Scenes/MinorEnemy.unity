@@ -772,6 +772,7 @@ MonoBehaviour:
   debuff: {fileID: 1278569807}
   baseStrenth: 1
   strengthEffect: 0.5
+  characterDeadEvent: {fileID: 11400000, guid: 58ba046902985de4c9f2b3a74c980bab, type: 2}
   isDead: 0
   actionDataSO: {fileID: 11400000, guid: bb5d72d4ff1bba948b530eb6e43ceedf, type: 2}
   currentEnemyAction:

@@ -1,3 +1,4 @@
+using System;
 using Event.ScriptObject;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
@@ -12,8 +13,17 @@ namespace Manager
         private AssetReference currentScene;
         public AssetReference map;
         private Vector2Int currentRoomVector;
+        private Room currentRoom;
         [Header("广播")]
         public ObjectEventSO afterRoomLoadedEvent;
+
+        public ObjectEventSO updateRoomEvent;
+
+        private void Start()
+        {
+            currentRoomVector = Vector2Int.one*-1;
+        }
+
         /// <summary>
         /// 处理加载房间事件时的行为
         /// </summary>
@@ -23,7 +33,7 @@ namespace Manager
             // 检查传入的数据是否为RoomDataSO类型，以确保类型安全
             if (data is Room)
             {
-                Room currentRoom = data as Room;
+                 currentRoom = data as Room;
                 // 将data转换为RoomDataSO类型，以便访问其属性
                 var currentData = currentRoom.roomData;
                 
@@ -35,7 +45,7 @@ namespace Manager
             await UnloadSceneTask();
             //加载房间
             await  LoadSceneTask();
-            afterRoomLoadedEvent.RaiseEvent(currentRoomVector,this);
+            afterRoomLoadedEvent.RaiseEvent(currentRoom,this);
         }
     
         /// <summary>
@@ -76,6 +86,10 @@ namespace Manager
         {
             // 等待当前场景卸载完成，以避免场景间的冲突。
             await UnloadSceneTask();
+            if (currentRoomVector!=Vector2.one*-1)
+            {
+                updateRoomEvent.RaiseEvent(currentRoomVector,this);
+            }
         
             // 设置当前场景为地图，准备加载新的地图场景。
             currentScene = map;

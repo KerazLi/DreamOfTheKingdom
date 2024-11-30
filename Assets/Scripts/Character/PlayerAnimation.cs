@@ -8,7 +8,7 @@ namespace Character
     public class PlayerAnimation : MonoBehaviour
     {
         
-        public Player player;
+        [HideInInspector]public Player player;
         private Animator animator;
 
         private void Awake()

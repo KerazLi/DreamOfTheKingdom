@@ -183,6 +183,16 @@ namespace Cards.Mono
             discardCountEvent.RaiseEvent(discardDeck.Count,this);
         }
 
+        public void ReleaseAllCards(object obj)
+        {
+            foreach (var card in handCard)
+            {
+                cardManager.ReleaseCardObject(card.gameObject);
+            }
+            handCard.Clear();
+            InitializeDeck();
+        }
+
 
     }
 }

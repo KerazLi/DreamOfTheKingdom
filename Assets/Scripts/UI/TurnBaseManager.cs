@@ -2,11 +2,13 @@ using System;
 using System.Collections;
 using Event.ScriptObject;
 using UnityEngine;
+using Utilities;
 
 namespace UI
 {
     public class TurnBaseManager : MonoBehaviour
     {
+        public GameObject playerObj;
         private bool isPlayerTurn ;
         private bool isEnemyTurn;
         public bool battleEnd = true;
@@ -79,7 +81,30 @@ namespace UI
             enemyTurnEnd.RaiseEvent(null,this);
             Debug.Log("EnemyTurnEnd");
         }
-        
+
+        public void OnRoomLoadedEvent(object obj)
+        {
+            Room room = obj as Room;
+            switch (room.roomData.roomType)
+            {
+                case RoomType.MinorEnemy:
+                case RoomType.EliteEnemy:
+                case RoomType.Boss:
+                    playerObj.SetActive(true);
+                    GameStart();
+                    break;
+                case RoomType.Shop:
+                case RoomType.Treasure:
+                    playerObj.SetActive(false);
+                    break;
+                case RoomType.RestRoom:
+                    playerObj.SetActive(true);
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
+        }
+
 
 
     }

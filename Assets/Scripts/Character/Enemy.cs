@@ -13,18 +13,13 @@ public class Enemy : CharacterBase
     public EnemyActionDataSO actionDataSO;
     public EnemyAction.EnemyAction currentEnemyAction;
     protected Player player;
-
-    protected override void Awake()
-    {
-        base.Awake();
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
-        //Debug.Log(VariableTool.Skill.GetHashCode());
-    }
+    
 
     public virtual void OnPlayerTurnBegin()
     {
         var randomIndex = Random.Range(0,actionDataSO.actions.Count);
         currentEnemyAction = actionDataSO.actions[randomIndex];
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
     }
     public virtual void OnEnemyTurnBegin()
     {
