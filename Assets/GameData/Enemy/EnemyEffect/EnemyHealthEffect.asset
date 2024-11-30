@@ -9,10 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a860f93f549d7bc44abfb63c3e5b7135, type: 3}
-  m_Name: EnemyHP
+  m_Script: {fileID: 11500000, guid: dfff5b9a792152f408878ca53429b3af, type: 3}
+  m_Name: EnemyHealthEffect
   m_EditorClassIdentifier: 
-  maxValue: 50
-  currentValue: 50
-  ValueChangedEvent: {fileID: 11400000, guid: 16adac72c5e90c648824ba1aba2a8500, type: 2}
-  description: "\u654C\u4EBAHP"
+  value: 20
+  targetType: 0

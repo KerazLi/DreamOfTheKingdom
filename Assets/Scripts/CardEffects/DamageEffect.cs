@@ -6,7 +6,7 @@ using Utilities;
 
 namespace CardEffects
 {
-    [CreateAssetMenu(fileName = "DamageEffect", menuName = "Effect/DamageEffect", order = 0)]
+    [CreateAssetMenu(fileName = "DamageEffect", menuName = "Effect/DamageEffect")]
     public class DamageEffect : CardEffect
     {
         public override void Excute(CharacterBase from, CharacterBase target)

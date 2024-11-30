@@ -611,11 +611,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1742775541}
-  - component: {fileID: 1742775542}
   - component: {fileID: 1742775543}
   - component: {fileID: 1742775545}
   - component: {fileID: 1742775544}
   - component: {fileID: 1742775546}
+  - component: {fileID: 1742775547}
+  - component: {fileID: 1742775548}
+  - component: {fileID: 1742775549}
+  - component: {fileID: 1742775550}
   m_Layer: 7
   m_Name: MinorEnemy
   m_TagString: Enemy
@@ -641,27 +644,6 @@ Transform:
   - {fileID: 520853949}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1742775542
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1742775540}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95c6882bf1dbed14ab987cd70c6eec2f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHp: 50
-  hp: {fileID: 11400000, guid: 8a7571d1f2e8c6543a8f2fe8f0bbba11, type: 2}
-  buffRound: {fileID: 11400000, guid: b05a1b5fc31b0be429db20389bd9a978, type: 2}
-  defense: {fileID: 11400000, guid: 7be42e82406a18347824d809954575bb, type: 2}
-  buff: {fileID: 1068135484}
-  debuff: {fileID: 1278569807}
-  baseStrenth: 1
-  strengthEffect: 0.5
-  isDead: 0
 --- !u!61 &1742775543
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -765,6 +747,151 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1742775547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1742775540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cc6078708f43ef42a8ef85a4c1e5edb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHp: 50
+  hp: {fileID: 11400000, guid: 8a7571d1f2e8c6543a8f2fe8f0bbba11, type: 2}
+  buffRound: {fileID: 11400000, guid: b05a1b5fc31b0be429db20389bd9a978, type: 2}
+  defense: {fileID: 11400000, guid: 7be42e82406a18347824d809954575bb, type: 2}
+  buff: {fileID: 1068135484}
+  debuff: {fileID: 1278569807}
+  baseStrenth: 1
+  strengthEffect: 0.5
+  isDead: 0
+  actionDataSO: {fileID: 11400000, guid: bb5d72d4ff1bba948b530eb6e43ceedf, type: 2}
+  currentEnemyAction:
+    intentSprite: {fileID: 0}
+    effect: {fileID: 0}
+--- !u!114 &1742775548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1742775540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0effa64ff8857bf44b3de6bbeac2a4ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventSO: {fileID: 11400000, guid: 473f4e2d171bc6f4391af2ef51439f91, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1742775547}
+        m_TargetAssemblyTypeName: Enemy, Assembly-CSharp
+        m_MethodName: OnPlayerTurnBegin
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1742775544}
+        m_TargetAssemblyTypeName: UI.HealthBarController, Assembly-CSharp
+        m_MethodName: UpdateIntentAction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1742775549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1742775540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0effa64ff8857bf44b3de6bbeac2a4ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventSO: {fileID: 11400000, guid: a12ba54b3c2e2554b8feaba79264fb94, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1742775544}
+        m_TargetAssemblyTypeName: UI.HealthBarController, Assembly-CSharp
+        m_MethodName: HideIntentAction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1742775550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1742775540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0effa64ff8857bf44b3de6bbeac2a4ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventSO: {fileID: 11400000, guid: 551de100b2bb3a94ca4bac1d7846ccf5, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1742775547}
+        m_TargetAssemblyTypeName: Enemy, Assembly-CSharp
+        m_MethodName: Attack
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1742775547}
+        m_TargetAssemblyTypeName: Enemy, Assembly-CSharp
+        m_MethodName: Skill
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1742775547}
+        m_TargetAssemblyTypeName: Character.CharacterBase, Assembly-CSharp
+        m_MethodName: RestDefense
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

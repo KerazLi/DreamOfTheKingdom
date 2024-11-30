@@ -1,5 +1,7 @@
 using System;
+using CardEffects;
 using Character;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -19,6 +21,9 @@ namespace UI
         private Label defenseAmountLabel;
         private VisualElement buffElement;
         private Label buffRound;
+        private VisualElement intentAction;
+        private Label intentAmount;
+        private Enemy enemy;
         [Header("Spirte")]
         public Sprite buffIcon;
         public Sprite debuffIcon;
@@ -26,6 +31,7 @@ namespace UI
         private void Awake()
         {
             currentChararcterHP = GetComponent<CharacterBase>();
+            enemy = GetComponent<Enemy>();
         }
 
         private void Start()
@@ -50,7 +56,10 @@ namespace UI
             MoveToWorldPosition(healthBar, HealthBarTransform.position,Vector2.zero);
             buffElement = healthBarDocument.rootVisualElement.Q<VisualElement>("Buff");
             buffRound = buffElement.Q<Label>("BuffAmount");
+            intentAction = healthBarDocument.rootVisualElement.Q<VisualElement>("Intent");
+            intentAmount = intentAction.Q<Label>("IntentAmount");
             buffElement.style.display = DisplayStyle.None;
+            intentAction.style.display = DisplayStyle.None;
         }
         
         private void Update()
@@ -80,8 +89,26 @@ namespace UI
             buffElement.style.display=currentChararcterHP.buffRound.currentValue>0?DisplayStyle.Flex:DisplayStyle.None;
             buffRound.text=currentChararcterHP.buffRound.currentValue.ToString();
             buffElement.style.backgroundImage=currentChararcterHP.baseStrenth>1?new StyleBackground(buffIcon):new StyleBackground(debuffIcon);
-            
-            
+        }
+        /// <summary>
+        /// 玩家回合调用
+        /// </summary>
+        public void UpdateIntentAction()
+        {
+            intentAction.style.display = DisplayStyle.Flex;
+            intentAction.style.backgroundImage = new StyleBackground(enemy.currentEnemyAction.intentSprite);
+            var value = enemy.currentEnemyAction.effect.value;
+            if (enemy.currentEnemyAction.effect.GetType()==typeof(DamageEffect))
+            {
+                value = (int)math.round(enemy.currentEnemyAction.effect.value * enemy.baseStrenth);
+            }
+
+            intentAmount.text = value.ToString();
+        }
+
+        public void HideIntentAction()
+        {
+            intentAction.style.display = DisplayStyle.None;
         }
     }
 }
