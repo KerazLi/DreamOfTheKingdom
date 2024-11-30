@@ -7,11 +7,8 @@ namespace Character
 {
     public class PlayerAnimation : MonoBehaviour
     {
-        private static readonly int IsSleep = Animator.StringToHash("isSleep");
-        private static readonly int IsParry = Animator.StringToHash("isParry");
-        private static readonly int Attack = Animator.StringToHash("attack");
-        private static readonly int Skill = Animator.StringToHash("skill");
-        private Player player;
+        
+        public Player player;
         private Animator animator;
 
         private void Awake()
@@ -22,20 +19,21 @@ namespace Character
 
         private void OnEnable()
         {
-            animator.Play(IsSleep);
-            animator.SetBool(IsSleep,true);
+            animator.Play( VariableTool.IsSleep);
+            animator.SetBool(VariableTool.IsSleep,true);
         }
+        
 
         public void PlayerTurnBeginAnimation()
         {
-            animator.SetBool(IsSleep,false);
-            animator.SetBool(IsParry,false);
+            animator.SetBool(VariableTool.IsSleep,false);
+            animator.SetBool(VariableTool.IsParry,false);
         }
         public void PlayerTurnEndAnimation()
         {
-            animator.SetBool(player.defense.currentValue > 0 ? IsParry : IsSleep, true);
-            Debug.Log(IsParry);
-            Debug.Log(IsSleep);
+            animator.SetBool(player.defense.currentValue > 0 ? VariableTool.IsParry : VariableTool.IsSleep, true);
+            Debug.Log(VariableTool.IsParry);
+            Debug.Log(VariableTool.IsSleep);
         }
 
         public void OnPlayCardEvent(object obj)
@@ -44,11 +42,11 @@ namespace Character
             switch (card.cardData.cardType)
             {
                 case CardType.Attack:
-                    animator.SetTrigger(Attack);
+                    animator.SetTrigger(VariableTool.Attack);
                     break;
                 case CardType.Defense:
                 case CardType.Skill:
-                    animator.SetTrigger(Skill);
+                    animator.SetTrigger(VariableTool.Skill);
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();

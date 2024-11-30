@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using Utilities;
 using Variable;
 
 namespace Character
@@ -25,7 +26,8 @@ namespace Character
 
         protected virtual void Awake()
         {
-            animator = GetComponent<Animator>();
+            animator = GetComponentInChildren<Animator>();
+            defense.currentValue = 0;
         }
         protected virtual void Start()
         {
@@ -41,13 +43,16 @@ namespace Character
             if (CurrentHP>currentDamage)
             {
                 CurrentHP -= currentDamage;
+                animator.SetTrigger(VariableTool.Hit);
                 Debug.Log("CurrentHP"+CurrentHP);
             }else
             {
                 CurrentHP = 0;
                 isDead = true;
+                animator.SetBool(VariableTool.IsDead, isDead);
             }
         }
+        
 
         public void UpdateDefense(int amount)
         {

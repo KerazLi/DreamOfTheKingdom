@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using Character;
 using EnemyAction;
 using UnityEngine;
@@ -17,6 +18,7 @@ public class Enemy : CharacterBase
     {
         base.Awake();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        //Debug.Log(VariableTool.Skill.GetHashCode());
     }
 
     public virtual void OnPlayerTurnBegin()
@@ -43,8 +45,28 @@ public class Enemy : CharacterBase
 
     public void Attack()
     {
-        currentEnemyAction.effect.Excute(this,player);
+        StartCoroutine(ProcessDelayAction("attack"));
     }
 
-    public void Skill() => currentEnemyAction.effect.Excute(this, this);
+    public void Skill()
+    {
+        StartCoroutine(ProcessDelayAction("skill"));
+    }
+    IEnumerator ProcessDelayAction(string name)
+    {
+         animator.SetTrigger(name);
+         yield return new WaitUntil(() =>
+             animator.GetCurrentAnimatorStateInfo(0).normalizedTime % 1.0f > 0.6f && !animator.IsInTransition(0)&&animator.GetCurrentAnimatorStateInfo(0).IsName(name));
+         if (name=="attack")
+         {
+             currentEnemyAction.effect.Excute(this,player);
+         }else if (name=="skill")
+         {
+             currentEnemyAction.effect.Excute(this,this);
+         }
+    }
+    
+
+    
+    
 }

@@ -12,10 +12,7 @@ namespace CardEffects
             if (targetType==EffectTargetType.Self)
             {
                 from.HealHealth(value);
-            }
-            if (targetType==EffectTargetType.Target)
-            {
-                from.HealHealth(value);
+                Debug.Log($"自身回复了{value}点生命");
             }
             if (targetType==EffectTargetType.All)
             {

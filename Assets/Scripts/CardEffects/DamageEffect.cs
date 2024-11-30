@@ -1,5 +1,6 @@
 ﻿using System;
 using Character;
+using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
 using Utilities;
@@ -22,7 +23,8 @@ namespace CardEffects
                 case EffectTargetType.Self:
                     break;
                 case EffectTargetType.Target:
-                    target.TakeDamage(value);
+                    var damage = (int)math.round(value * from.baseStrenth);
+                    target.TakeDamage(damage);
                     Debug.Log($"造成了{value}的伤害");
                     break;
                 case EffectTargetType.All:
