@@ -4,23 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89a9e470-03e6-4f27-ad92-72370317cd51" name="Changes" comment="完成敌人动画，修改了一些卡牌bug">
+    <list default="true" id="89a9e470-03e6-4f27-ad92-72370317cd51" name="Changes" comment="制作胜利和抽卡面板">
+      <change afterPath="$PROJECT_DIR$/Assets/GameData/Events/PickCardEvent.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameData/Events/PickCardEvent.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/GameWinPanel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/GameWinPanel.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/GameWinPanel.uxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/GameWinPanel.uxml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/PickCardPanel.uxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/PickCardPanel.uxml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/USS.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/USS/GamePlayPanelUSS.uss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/USS/GamePlayPanelUSS.uss.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/USS/HealthBarUSS.uss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/USS/HealthBarUSS.uss.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DreamOfTheKingdom/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DreamOfTheKingdom/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Font/SmileySans-Oblique SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Font/SmileySans-Oblique SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameData/Enemy/EnemyEffect/EnemyDamageEffect.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameData/Enemy/EnemyEffect/EnemyDamageEffect.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameData/Events/AfterLoadRoomEvent.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameData/Events/AfterLoadRoomEvent.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameData/Variable/PlayerHP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameData/Variable/PlayerHP.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Card/Card.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Card/Card.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MinorEnemy.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MinorEnemy.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameData/Variable/EnemyHP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameData/Variable/EnemyHP.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Cards/Mono/CardDeck.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Cards/Mono/CardDeck.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Character/CharacterBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Character/CharacterBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Character/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Character/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Character/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Character/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Character/PlayerAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Character/PlayerAnimation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/SceneLoadManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/SceneLoadManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/TurnBaseManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/TurnBaseManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/GamePlayPanelUSS.uss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/GamePlayPanelUSS.uss.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/HealthBarUSS.uss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/HealthBarUSS.uss.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +53,9 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1d7fdf1f7afe4c58866b88a610a83dc71dda00/6a/84ac51bb/Transform.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1d7fdf1f7afe4c58866b88a610a83dc71dda00/84/0625132f/UnityAction`1.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/83b2d8ca7a884e2199e44b398c4cea9334600/4f/ef73daa6/Animator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/UnityCode/DreamOfTheKingdom/Assets/Scripts/CardEffects/DamageEffect.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/UnityCode/DreamOfTheKingdom/Assets/GameData/Events/AfterLoadRoomEvent.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/UnityCode/DreamOfTheKingdom/Assets/GameData/Events/AfterLoadRoomEvent.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/UnityCode/DreamOfTheKingdom/Assets/GameData/Variable/EnemyHP.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CardEffects/DrawCardEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CardEffects/HealthEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/Player.cs" root0="FORCE_HIGHLIGHTING" />
@@ -57,6 +66,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Event/ScriptObject/ObjectEventSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Manager/CardManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Rooms/ScriptObject/MapLayoutSO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/GameWinPanel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/TurnBaseManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/Enums.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/SerializeVector3.cs" root0="FORCE_HIGHLIGHTING" />
@@ -198,7 +208,7 @@
       <workItem from="1732879077534" duration="104000" />
       <workItem from="1732879193210" duration="4041000" />
       <workItem from="1732978954497" duration="4726000" />
-      <workItem from="1732983853413" duration="9132000" />
+      <workItem from="1732983853413" duration="13600000" />
     </task>
     <task id="LOCAL-00001" summary="实现随机地图">
       <option name="closed" value="true" />
@@ -464,7 +474,23 @@
       <option name="project" value="LOCAL" />
       <updated>1732988831236</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="对战胜负逻辑">
+      <option name="closed" value="true" />
+      <created>1732993949574</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1732993949574</updated>
+    </task>
+    <task id="LOCAL-00035" summary="对战胜负逻辑">
+      <option name="closed" value="true" />
+      <created>1732993968700</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1732993968700</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -503,8 +529,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="导入字体" />
-    <MESSAGE value="制作卡牌的预制体" />
     <MESSAGE value="完成卡牌的代码制作" />
     <MESSAGE value="导入免费素材" />
     <MESSAGE value="完成卡牌对象池" />
@@ -528,7 +552,9 @@
     <MESSAGE value="修改相邻卡牌碰撞体的bug" />
     <MESSAGE value="完成敌人意图和攻击" />
     <MESSAGE value="完成敌人动画，修改了一些卡牌bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成敌人动画，修改了一些卡牌bug" />
+    <MESSAGE value="对战胜负逻辑" />
+    <MESSAGE value="制作胜利和抽卡面板" />
+    <option name="LAST_COMMIT_MESSAGE" value="制作胜利和抽卡面板" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -105,6 +105,12 @@ namespace UI
             }
         }
 
+        public void OnLoadMapEvent()
+        {
+            battleEnd = true;
+            playerObj.SetActive(false);
+        }
+
 
 
     }
