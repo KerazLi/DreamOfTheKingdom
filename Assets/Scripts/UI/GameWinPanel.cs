@@ -32,5 +32,10 @@ namespace UI
         {
             backToMapEvent.RaiseEvent(null,this);
         }
+
+        public void HidePickCardButton()
+        {
+            pickCardButton.style.display = DisplayStyle.None;
+        }
     }
 }

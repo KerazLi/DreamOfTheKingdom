@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
 using Utilities;
+using Random = UnityEngine.Random;
 
 namespace Manager
 {
@@ -19,6 +20,8 @@ namespace Manager
         public CardLibrarySO newGameCardLibrary;
         
         public CardLibrarySO currentCardLibrary;
+
+        private int previousIndex;
         
         
         // 当脚本实例被创建时，Awake方法会被调用
@@ -82,9 +85,38 @@ namespace Manager
             poolTool.ReleaseObjToPool(obj);
         }
 
+        public CardDataSO GetNewCardData()
+        {
+            var randomIndex = 0;
+            do
+            {
+                randomIndex = Random.Range(0, cardDataList.Count);
+            } while (previousIndex==randomIndex);
+            previousIndex=randomIndex;
+            return cardDataList[randomIndex];
+        }
+
         private void OnDisable()
         {
             currentCardLibrary.cardLibraryList.Clear();
+        }
+
+        public void UnlockCard(CardDataSO newCardData)
+        {
+            var newCard = new CardLibraryEntry
+            {
+                cardData = newCardData,
+                cardCount = 1
+            };
+            if (currentCardLibrary.cardLibraryList.Contains(newCard))
+            {
+                var target=currentCardLibrary.cardLibraryList.Find(x=>x.cardData==newCardData);
+                target.cardCount++;
+            }
+            else
+            {
+                currentCardLibrary.cardLibraryList.Add(newCard);
+            }
         }
     }
 }

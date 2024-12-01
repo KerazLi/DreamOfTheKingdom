@@ -66,16 +66,23 @@ namespace Manager
             }
         }
 
+        /// <summary>
+        /// 当角色死亡时触发的事件处理方法。
+        /// </summary>
+        /// <param name="character">死亡的角色对象。</param>
         public void OnChararcterDeadEvent(object character)
         {
+            // 当死亡的角色是玩家时，触发游戏结束事件。
             if (character is Player)
             {
                 StartCoroutine(EventDelayAction(gameOverEvent));
             }
             
+            // 当死亡的角色是敌人时，从存活敌人列表中移除，并检查是否所有敌人都已死亡。
             if (character is Enemy)
             {
                 aliveEnemyList.Remove(character as Enemy);
+                // 如果所有敌人都已死亡，则触发游戏胜利事件。
                 if (aliveEnemyList.Count==0)
                 {
                     StartCoroutine(EventDelayAction(gameWinEvent));
@@ -83,10 +90,17 @@ namespace Manager
             }
         }
 
+        /// <summary>
+        /// 延迟触发事件的协程方法。
+        /// </summary>
+        /// <param name="eventSo">要触发的事件对象。</param>
         IEnumerator EventDelayAction(ObjectEventSO eventSo)
         {
+            // 等待1.5秒，用于延迟事件的触发
             yield return new WaitForSeconds(1.5f);
-            eventSo.RaiseEvent(null,this);
+            
+            // 触发事件，传递null作为事件参数，本对象作为事件源
+            eventSo.RaiseEvent(null, this);
         }
 
     }

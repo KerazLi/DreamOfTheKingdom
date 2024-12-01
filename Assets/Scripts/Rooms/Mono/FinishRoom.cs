@@ -1,13 +1,15 @@
-using System;
 using Event.ScriptObject;
 using UnityEngine;
 
-public class FinishRoom : MonoBehaviour
+namespace Rooms.Mono
 {
-    public ObjectEventSO loadMapEvent;
-    private void OnMouseDown()
+    public class FinishRoom : MonoBehaviour
     {
-        //返回地图
-        loadMapEvent.RaiseEvent(null,this);
+        public ObjectEventSO loadMapEvent;
+        private void OnMouseDown()
+        {
+            //返回地图
+            loadMapEvent.RaiseEvent(null,this);
+        }
     }
 }

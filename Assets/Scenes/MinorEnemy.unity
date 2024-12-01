@@ -898,6 +898,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BackToMap
       objectReference: {fileID: 0}
+    - target: {fileID: 4265139977250276387, guid: 6fc809ba5c38aeb4da1d031a7f848cc4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5200493416371544884, guid: 6fc809ba5c38aeb4da1d031a7f848cc4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
