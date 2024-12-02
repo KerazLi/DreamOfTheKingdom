@@ -1,5 +1,6 @@
 using System;
 using Cards.Mono;
+using Unity.VisualScripting;
 using Variable;
 
 namespace Character
@@ -32,5 +33,15 @@ namespace Character
                 CurrentMana = 0;
             }
         }
+
+        public void NewGame()
+        {
+            CurrentHP = maxHp;
+            isDead = false;
+            buffRound.currentValue = 0;
+            defense.currentValue = 0;
+            NewTurn();
+        }
+
     }
 }

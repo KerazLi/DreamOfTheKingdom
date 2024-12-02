@@ -32,6 +32,10 @@ namespace Manager
         /// <param name="value">表示房间位置的二维向量，x轴代表列，y轴代表行。</param>
         public void UpdateMapLayoutData(object value)
         {
+            if (mapLayoutSO.mapRoomDatasList.Count==0)
+            {
+                return;
+            }
             var roomVector = (Vector2Int)value;
             // 查找当前房间，以便更新其状态为已访问
             var currentRoom =
@@ -101,6 +105,13 @@ namespace Manager
             
             // 触发事件，传递null作为事件参数，本对象作为事件源
             eventSo.RaiseEvent(null, this);
+        }
+
+        public void NewGameStart()
+        {
+            mapLayoutSO.mapRoomDatasList.Clear();
+            mapLayoutSO.linePositions.Clear();
+            
         }
 
     }

@@ -4,6 +4,7 @@ using Character;
 using DG.Tweening;
 using Event.ScriptObject;
 using Manager;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
 using Utilities;
@@ -21,6 +22,7 @@ namespace Cards.Mono
         // 手牌堆，用于存储玩家手中的卡片对象
         [SerializeField] private List<Card> handCard=new();
         public CardLayoutManager cardLayoutManager;
+        public Player player;
 
         public Vector3 deckPosition;
         [Header("事件广播")]
@@ -32,6 +34,7 @@ namespace Cards.Mono
         /// </summary>
         private void Start()
         {
+            //player = GetComponent<Player>();
             InitializeDeck();
             //DrawCard(3);
         }
@@ -77,6 +80,10 @@ namespace Cards.Mono
         /// <param name="amount">要抽取的卡片数量</param>
         public void DrawCard(int amount)
         {
+            if (player.isDead)
+            {
+                return;
+            }
             for (int i = 0; i < amount; i++)
             {
                 CardDataSO currentCard=drawDeck[0];
@@ -183,13 +190,23 @@ namespace Cards.Mono
             discardCountEvent.RaiseEvent(discardDeck.Count,this);
         }
 
+        /// <summary>
+        /// 释放所有卡片并重新初始化牌库。
+        /// </summary>
+        /// <param name="obj">未使用，可用于传递额外的参数。</param>
         public void ReleaseAllCards(object obj)
         {
+            // 遍历手中的每一张卡片，释放它们
             foreach (var card in handCard)
             {
                 cardManager.ReleaseCardObject(card.gameObject);
             }
+            
+            
+            // 清空手中的卡片列表
             handCard.Clear();
+            
+            // 重新初始化牌库
             InitializeDeck();
         }
 

@@ -14,7 +14,7 @@ namespace UI
         public ObjectEventSO pickCardEvent;
         public ObjectEventSO backToMapEvent;
 
-        private void Awake()
+        private void OnEnable()
         {
             rootElement = GetComponent<UIDocument>().rootVisualElement;
             pickCardButton = rootElement.Q<Button>("PickCardButton");

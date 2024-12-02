@@ -28,16 +28,13 @@ namespace UI
         public Sprite buffIcon;
         public Sprite debuffIcon;
 
-        private void Awake()
+        private void OnEnable()
         {
             currentChararcterHP = GetComponent<CharacterBase>();
             enemy = GetComponent<Enemy>();
-        }
-
-        private void Start()
-        {
             InitCharacterHealthBar();
         }
+        
 
         private void MoveToWorldPosition(VisualElement element,Vector3 worldPosition,Vector2 size)
         {

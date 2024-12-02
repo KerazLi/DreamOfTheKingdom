@@ -6,7 +6,7 @@ public class UIManager : MonoBehaviour
 {
     [Header("面板")] 
     public GameObject gamePlayPanel;
-    //public GameObject gameOverPanel;
+    public GameObject gameOverPanel;
     public GameObject gameWinPanel;
     public GameObject pickCardPanel;
 
@@ -34,13 +34,14 @@ public class UIManager : MonoBehaviour
     public void HideAllPanel()
     {
         gamePlayPanel.SetActive(false);
-        //gameOverPanel.SetActive(false);
+        gameOverPanel.SetActive(false);
         gameWinPanel.SetActive(false);
     }
     public void OnGameOverEvent()
     {
         gamePlayPanel.SetActive(false);
-        //gameOverPanel.SetActive(true);
+        gameOverPanel.SetActive(true);
+        gamePlayPanel.SetActive(false);
     }
     public void OnGameWinEvent()
     {
@@ -50,6 +51,7 @@ public class UIManager : MonoBehaviour
     public void OnPickCardEvent()
     {
         pickCardPanel.SetActive(true);
+        Debug.Log("打开选择卡牌的界面");
     }
     public void OnPickCardFinishEvent()
     {

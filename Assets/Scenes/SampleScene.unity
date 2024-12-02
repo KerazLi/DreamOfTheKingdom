@@ -128,8 +128,8 @@ GameObject:
   m_Component:
   - component: {fileID: 173557187}
   - component: {fileID: 173557188}
-  - component: {fileID: 173557189}
   - component: {fileID: 173557190}
+  - component: {fileID: 173557189}
   - component: {fileID: 173557191}
   - component: {fileID: 173557192}
   - component: {fileID: 173557193}
@@ -142,7 +142,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &173557187
 Transform:
   m_ObjectHideFlags: 0
@@ -181,8 +181,8 @@ MonoBehaviour:
   debuff: {fileID: 1436686943}
   baseStrenth: 1
   strengthEffect: 0.5
-  characterDeadEvent: {fileID: 11400000, guid: 58ba046902985de4c9f2b3a74c980bab, type: 2}
   isDead: 0
+  characterDeadEvent: {fileID: 11400000, guid: 58ba046902985de4c9f2b3a74c980bab, type: 2}
   playerMana: {fileID: 11400000, guid: 035d5cb824a915c4c9938c2fd9ddded9, type: 2}
   maxMana: 3
 --- !u!114 &173557189
@@ -200,7 +200,7 @@ MonoBehaviour:
   m_PanelSettings: {fileID: 11400000, guid: 563ee7799ff300f49867c5cc804f877f, type: 2}
   m_ParentUI: {fileID: 0}
   sourceAsset: {fileID: 9197481963319205126, guid: c74ea497ae254bd428a06bd89e1c75ff, type: 3}
-  m_SortingOrder: 10
+  m_SortingOrder: 0
   m_WorldSpaceSizeMode: 1
   m_WorldSpaceWidth: 1920
   m_WorldSpaceHeight: 1080
@@ -891,6 +891,8 @@ GameObject:
   - component: {fileID: 677884776}
   - component: {fileID: 677884777}
   - component: {fileID: 677884778}
+  - component: {fileID: 677884779}
+  - component: {fileID: 677884780}
   m_Layer: 0
   m_Name: TurnBaseManager
   m_TagString: Untagged
@@ -1006,7 +1008,63 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 677884775}
         m_TargetAssemblyTypeName: UI.TurnBaseManager, Assembly-CSharp
-        m_MethodName: OnLoadMapEvent
+        m_MethodName: StopTurn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &677884779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 677884773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0effa64ff8857bf44b3de6bbeac2a4ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventSO: {fileID: 11400000, guid: eaacdc2db2f01bf4faa97a05ee855867, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 677884775}
+        m_TargetAssemblyTypeName: UI.TurnBaseManager, Assembly-CSharp
+        m_MethodName: StopTurn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &677884780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 677884773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0effa64ff8857bf44b3de6bbeac2a4ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventSO: {fileID: 11400000, guid: d5c4da5ca23c246468633ccdd56dc9d0, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 677884775}
+        m_TargetAssemblyTypeName: UI.TurnBaseManager, Assembly-CSharp
+        m_MethodName: NewGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1028,6 +1086,8 @@ GameObject:
   - component: {fileID: 873239953}
   - component: {fileID: 873239954}
   - component: {fileID: 873239955}
+  - component: {fileID: 873239956}
+  - component: {fileID: 873239957}
   m_Layer: 0
   m_Name: SceneLoadManager
   m_TagString: Untagged
@@ -1064,6 +1124,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   map:
     m_AssetGUID: 91e349991038d36499ab3336d2a59585
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  menu:
+    m_AssetGUID: 9955fe827e069be4a9d53f717d42096d
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -1126,6 +1192,128 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &873239956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 873239951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0effa64ff8857bf44b3de6bbeac2a4ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventSO: {fileID: 11400000, guid: d86606a2c2e64d7498b98d944ddced85, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 873239953}
+        m_TargetAssemblyTypeName: Manager.SceneLoadManager, Assembly-CSharp
+        m_MethodName: LoadMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &873239957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 873239951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0effa64ff8857bf44b3de6bbeac2a4ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventSO: {fileID: 11400000, guid: d5c4da5ca23c246468633ccdd56dc9d0, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 873239953}
+        m_TargetAssemblyTypeName: Manager.SceneLoadManager, Assembly-CSharp
+        m_MethodName: LoadMap
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!1 &948164431
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 948164432}
+  - component: {fileID: 948164434}
+  - component: {fileID: 948164433}
+  m_Layer: 0
+  m_Name: GameOverPanel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &948164432
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 948164431}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &948164433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 948164431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39ab23d9e790fbd49b9a9e5d655164fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loadMenuEvent: {fileID: 11400000, guid: d86606a2c2e64d7498b98d944ddced85, type: 2}
+  GameOverEvent: {fileID: 11400000, guid: eaacdc2db2f01bf4faa97a05ee855867, type: 2}
+--- !u!114 &948164434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 948164431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PanelSettings: {fileID: 11400000, guid: 563ee7799ff300f49867c5cc804f877f, type: 2}
+  m_ParentUI: {fileID: 0}
+  sourceAsset: {fileID: 9197481963319205126, guid: 9c3158d0de1379d49b5c410e8c278919, type: 3}
+  m_SortingOrder: 0
+  m_WorldSpaceSizeMode: 1
+  m_WorldSpaceWidth: 1920
+  m_WorldSpaceHeight: 1080
 --- !u!1 &1050534563
 GameObject:
   m_ObjectHideFlags: 0
@@ -1263,6 +1451,7 @@ GameObject:
   - component: {fileID: 1428809953}
   - component: {fileID: 1428809954}
   - component: {fileID: 1428809955}
+  - component: {fileID: 1428809956}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1377,6 +1566,34 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: Manager.GameManager, Assembly-CSharp
         m_MethodName: OnRoomLoadEvent
         m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1428809956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1428809950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0effa64ff8857bf44b3de6bbeac2a4ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventSO: {fileID: 11400000, guid: d5c4da5ca23c246468633ccdd56dc9d0, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1428809952}
+        m_TargetAssemblyTypeName: Manager.GameManager, Assembly-CSharp
+        m_MethodName: NewGameStart
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1528,6 +1745,7 @@ GameObject:
   - component: {fileID: 1453711895}
   - component: {fileID: 1453711894}
   - component: {fileID: 1453711896}
+  - component: {fileID: 1453711897}
   m_Layer: 0
   m_Name: UIManager
   m_TagString: Untagged
@@ -1563,6 +1781,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gamePlayPanel: {fileID: 648864796}
+  gameOverPanel: {fileID: 948164431}
   gameWinPanel: {fileID: 1942086137}
   pickCardPanel: {fileID: 284490887}
 --- !u!114 &1453711891
@@ -1724,6 +1943,34 @@ MonoBehaviour:
       - m_Target: {fileID: 1453711889}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: OnPickCardFinishEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1453711897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1453711887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0effa64ff8857bf44b3de6bbeac2a4ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventSO: {fileID: 11400000, guid: d5c4da5ca23c246468633ccdd56dc9d0, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1453711889}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: HideAllPanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1971,6 +2218,7 @@ MonoBehaviour:
   cardManager: {fileID: 1607465197}
   handCard: []
   cardLayoutManager: {fileID: 369392461}
+  player: {fileID: 173557188}
   deckPosition: {x: 0, y: 0, z: 0}
   drawCountEvent: {fileID: 11400000, guid: ea2999d5f86b17149a8e745d509994fc, type: 2}
   discardCountEvent: {fileID: 11400000, guid: 628907d766bab4b438612f41fbec7af1, type: 2}
@@ -2503,3 +2751,4 @@ SceneRoots:
   - {fileID: 1453711888}
   - {fileID: 1942086138}
   - {fileID: 284490888}
+  - {fileID: 948164432}

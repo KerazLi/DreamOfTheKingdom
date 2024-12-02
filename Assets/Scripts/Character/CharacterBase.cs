@@ -16,6 +16,7 @@ namespace Character
         public GameObject buff, debuff;
         public float baseStrenth = 1f;
         public float strengthEffect = 0.5f;
+        public bool isDead;
         public int CurrentHP { get => hp.currentValue;set => hp.SetValue(value);}
         [Header("广播")] public ObjectEventSO characterDeadEvent;
 
@@ -24,7 +25,7 @@ namespace Character
             get => hp.maxValue;
         }
 
-        public bool isDead;
+        
 
         protected virtual void Awake()
         {

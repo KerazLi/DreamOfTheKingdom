@@ -12,6 +12,7 @@ namespace Manager
 
         private AssetReference currentScene;
         public AssetReference map;
+        public AssetReference menu;
         private Vector2Int currentRoomVector;
         private Room currentRoom;
         [Header("广播")]
@@ -22,6 +23,7 @@ namespace Manager
         private void Start()
         {
             currentRoomVector = Vector2Int.one*-1;
+            LoadMenu();
         }
 
         /// <summary>
@@ -93,6 +95,21 @@ namespace Manager
         
             // 设置当前场景为地图，准备加载新的地图场景。
             currentScene = map;
+        
+            // 等待新场景加载完成，确保场景切换的流畅性。
+            await LoadSceneTask();
+        }
+        public async void LoadMenu()
+        {
+            if (currentScene!=null)
+            {
+                await UnloadSceneTask();
+            }
+            // 等待当前场景卸载完成，以避免场景间的冲突。
+            //await UnloadSceneTask();
+        
+            // 设置当前场景为地图，准备加载新的地图场景。
+            currentScene = menu;
         
             // 等待新场景加载完成，确保场景切换的流畅性。
             await LoadSceneTask();

@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Character;
 using Event.ScriptObject;
 using UnityEngine;
 using Utilities;
@@ -11,7 +12,7 @@ namespace UI
         public GameObject playerObj;
         private bool isPlayerTurn ;
         private bool isEnemyTurn;
-        public bool battleEnd = true;
+        public bool battleEnd;
         private float timeCounter;
         public float enemyTurnDuration;
         public float playerTurnDuration;
@@ -90,8 +91,8 @@ namespace UI
                 case RoomType.MinorEnemy:
                 case RoomType.EliteEnemy:
                 case RoomType.Boss:
-                    playerObj.SetActive(true);
                     GameStart();
+                    playerObj.SetActive(true);
                     break;
                 case RoomType.Shop:
                 case RoomType.Treasure:
@@ -105,11 +106,22 @@ namespace UI
             }
         }
 
-        public void OnLoadMapEvent()
+        /// <summary>
+        /// 处理地图加载事件的方法
+        /// </summary>
+        public void StopTurn()
         {
+            // 设置战斗结束状态为true，用于初始化或重置游戏状态
             battleEnd = true;
+            // 在地图加载时隐藏玩家对象，可能为了初始化设置或避免玩家在地图加载时可见
             playerObj.SetActive(false);
         }
+
+        public void NewGame()
+        {
+            playerObj.gameObject.GetComponent<Player>().NewGame();
+        }
+
 
 
 
