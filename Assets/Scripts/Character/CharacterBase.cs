@@ -65,14 +65,14 @@ namespace Character
                 // 如果当前生命值大于所受伤害，减少生命值并触发受击动画
                 CurrentHP -= damage;
                 Debug.Log("Damge"+damage);
-                animator.SetTrigger(VariableTool.Hit);
+                animator.SetTrigger("hit");
                 Debug.Log("CurrentHP"+CurrentHP);
             }else
             {
                 // 如果当前生命值不足以承受伤害，将生命值设为0，并标记角色为死亡状态
                 CurrentHP = 0;
                 isDead = true;
-                animator.SetBool(VariableTool.IsDead, isDead);
+                animator.SetBool("isDead", isDead);
                 characterDeadEvent.RaiseEvent(this,this);
             }
             

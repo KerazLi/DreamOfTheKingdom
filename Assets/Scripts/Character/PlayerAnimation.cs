@@ -19,21 +19,20 @@ namespace Character
 
         private void OnEnable()
         {
-            animator.Play( VariableTool.IsSleep);
-            animator.SetBool(VariableTool.IsSleep,true);
+            animator.Play("sleep");
+            animator.SetBool("isSleep",true);
         }
         
 
         public void PlayerTurnBeginAnimation()
         {
-            animator.SetBool(VariableTool.IsSleep,false);
-            animator.SetBool(VariableTool.IsParry,false);
+            animator.SetBool("isSleep",false);
+            animator.SetBool("isPerry",false);
         }
         public void PlayerTurnEndAnimation()
         {
-            animator.SetBool(player.defense.currentValue > 0 ? VariableTool.IsParry : VariableTool.IsSleep, true);
-            Debug.Log(VariableTool.IsParry);
-            Debug.Log(VariableTool.IsSleep);
+            animator.SetBool(player.defense.currentValue > 0 ? "isParry": "isSleep", true);
+            
         }
 
         public void OnPlayCardEvent(object obj)
@@ -42,11 +41,11 @@ namespace Character
             switch (card.cardData.cardType)
             {
                 case CardType.Attack:
-                    animator.SetTrigger(VariableTool.Attack);
+                    animator.SetTrigger("attack");
                     break;
                 case CardType.Defense:
                 case CardType.Skill:
-                    animator.SetTrigger(VariableTool.Skill);
+                    animator.SetTrigger("skill");
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
