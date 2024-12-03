@@ -52,5 +52,9 @@ namespace Character
                     throw new ArgumentOutOfRangeException();
             }
         }
+        public void SetSleepAnimation()
+        {
+            animator.Play("death");
+        }
     }
 }

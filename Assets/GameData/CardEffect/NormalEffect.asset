@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b50e13ce4cbf42bfb43557dd3bec3f42, type: 3}
   m_Name: NormalEffect
   m_EditorClassIdentifier: 
-  value: 502
+  value: 6
   targetType: 1

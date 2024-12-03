@@ -22,8 +22,8 @@ public class UIManager : MonoBehaviour
                 gamePlayPanel.SetActive(true);
                 break;
             case RoomType.Shop:
-                break;
             case RoomType.Treasure:
+                gameWinPanel.SetActive(true);
                 break;
             case RoomType.RestRoom:
                 RestRoomPanel.SetActive(true);

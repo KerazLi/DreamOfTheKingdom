@@ -100,6 +100,7 @@ namespace UI
                     break;
                 case RoomType.RestRoom:
                     playerObj.SetActive(true);
+                    playerObj.GetComponent<PlayerAnimation>().SetSleepAnimation();
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();

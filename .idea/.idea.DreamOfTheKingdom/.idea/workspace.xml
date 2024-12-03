@@ -7,6 +7,9 @@
     <list default="true" id="89a9e470-03e6-4f27-ad92-72370317cd51" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DreamOfTheKingdom/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DreamOfTheKingdom/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Font/SmileySans-Oblique SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Font/SmileySans-Oblique SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameData/CardEffect/NormalEffect.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameData/CardEffect/NormalEffect.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameData/CardLibrary/NewGameLibrary.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameData/CardLibrary/NewGameLibrary.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameData/Enemy/EnemyEffect/EnemyDamageEffect.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameData/Enemy/EnemyEffect/EnemyDamageEffect.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameData/Map/MapConfigSO.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameData/Map/MapConfigSO.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Effects/Buff/buff_Atlas.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Effects/Buff/buff_Atlas.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Effects/Buff/buff_Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Effects/Buff/buff_Material.mat" afterDir="false" />
@@ -33,12 +36,13 @@
       <change beforePath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Spine Animations/Vacuum/Vacuum_Atlas.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Spine Animations/Vacuum/Vacuum_Atlas.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Spine Animations/Vacuum/Vacuum_Vacuum.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Spine Animations/Vacuum/Vacuum_Vacuum.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Spine Animations/Vacuum/Vacuum_Vacuum_2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Spine Animations/Vacuum/Vacuum_Vacuum_2.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/RestRoom.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/RestRoom.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Shop.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Shop.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Treasure.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Treasure.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Character/CharacterBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Character/CharacterBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Character/PlayerAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Character/PlayerAnimation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/TurnBaseManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/TurnBaseManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Setting/Panel Settings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Setting/Panel Settings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/MenuPanel.uxml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/MenuPanel.uxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
     </list>
@@ -227,6 +231,7 @@
       <workItem from="1733154647488" duration="99000" />
       <workItem from="1733154764769" duration="9633000" />
       <workItem from="1733248457519" duration="645000" />
+      <workItem from="1733255400537" duration="2309000" />
     </task>
     <task id="LOCAL-00001" summary="实现随机地图">
       <option name="closed" value="true" />

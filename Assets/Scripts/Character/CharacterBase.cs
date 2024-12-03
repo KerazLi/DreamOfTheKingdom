@@ -39,22 +39,43 @@ namespace Character
             buffRound.currentValue = 0;
         }
 
+        
+
+        /// <summary>
+        /// 角色受到伤害时调用的方法。
+        /// </summary>
+        /// <param name="damage">攻击者对角色造成的伤害值。</param>
         public virtual void TakeDamage(int damage)
         {
-            var currentDamage = (damage - defense.currentValue)>=0?(damage - defense.currentValue):0;
-            var currentDefense = (defense.currentValue - currentDamage)>=0?0:(defense.currentValue - currentDamage);
-            if (CurrentHP>currentDamage)
+            if (damage>defense.currentValue)
             {
-                CurrentHP -= currentDamage;
+                damage -= defense.currentValue;
+                defense.currentValue = 0;
+            }else
+            {
+                defense.currentValue-=damage;
+                damage = 0;
+            }
+            /*// 计算实际伤害，确保伤害值不会小于0
+            var currentDamage = (damage - defense.currentValue)>=0?(damage - defense.currentValue):0;
+            // 更新防御力，确保防御力不会小于0
+            defense.currentValue = (defense.currentValue - currentDamage)>=0?0:(defense.currentValue - currentDamage);*/
+            if (CurrentHP>damage)
+            {
+                // 如果当前生命值大于所受伤害，减少生命值并触发受击动画
+                CurrentHP -= damage;
+                Debug.Log("Damge"+damage);
                 animator.SetTrigger(VariableTool.Hit);
                 Debug.Log("CurrentHP"+CurrentHP);
             }else
             {
+                // 如果当前生命值不足以承受伤害，将生命值设为0，并标记角色为死亡状态
                 CurrentHP = 0;
                 isDead = true;
                 animator.SetBool(VariableTool.IsDead, isDead);
                 characterDeadEvent.RaiseEvent(this,this);
             }
+            
         }
         
 

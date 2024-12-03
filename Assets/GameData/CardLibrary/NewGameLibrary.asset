@@ -15,5 +15,5 @@ MonoBehaviour:
   cardLibraryList:
   - cardData: {fileID: 11400000, guid: f30f49b0f0544f6489e67026d18bf7db, type: 2}
     cardCount: 3
-  - cardData: {fileID: 11400000, guid: eb84d467d65e56e4eb7b32b32dc6d8ae, type: 2}
+  - cardData: {fileID: 11400000, guid: f30f49b0f0544f6489e67026d18bf7db, type: 2}
     cardCount: 3
