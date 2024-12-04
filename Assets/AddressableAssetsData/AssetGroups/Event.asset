@@ -16,7 +16,7 @@ MonoBehaviour:
   m_GUID: 98253c431fc680044997e2c48a111a8e
   m_SerializeEntries:
   - m_GUID: 9fa9e45f60e11c048a5b015c1e13d0b7
-    m_Address: Assets/GameData/Events/IntEvent/EnemyStrenghthChanged Event.asset
+    m_Address: EnemyStrenghthChanged Event
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

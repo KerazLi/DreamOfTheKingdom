@@ -6,18 +6,21 @@
   <component name="ChangeListManager">
     <list default="true" id="89a9e470-03e6-4f27-ad92-72370317cd51" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DreamOfTheKingdom/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DreamOfTheKingdom/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameData/Enemy/EnemyAction/MinorEnemyAction.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameData/Enemy/EnemyAction/MinorEnemyAction.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameData/Map/MapConfigSO.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameData/Map/MapConfigSO.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameData/Variable/EnemyHP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameData/Variable/EnemyHP.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameData/Variable/PlayerHP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameData/Variable/PlayerHP.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Spine Animations/Mop/Boss_Controller.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Spine Animations/Mop/Boss_Controller.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Spine Animations/PlateKnight/Pzknight_Controller.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Spine Animations/PlateKnight/Pzknight_Controller.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Boss.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Boss.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/EliteEnemy.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/EliteEnemy.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MinorEnemy.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MinorEnemy.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/GamePlayPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/GamePlayPanel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/CardData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/CardData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Event.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Event.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Scene.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Scene.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Font/SmileySans-Oblique SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Font/SmileySans-Oblique SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameData/CardLibrary/NewGameLibrary.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameData/CardLibrary/NewGameLibrary.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Spine Animations/JuicerKnight/JuicerKnight_Controller.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Spine Animations/JuicerKnight/JuicerKnight_Controller.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/SceneLoadManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/SceneLoadManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRP.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +45,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1d7fdf1f7afe4c58866b88a610a83dc71dda00/6a/84ac51bb/Transform.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1d7fdf1f7afe4c58866b88a610a83dc71dda00/84/0625132f/UnityAction`1.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/697767cb07d84357b6045b31736742eb1f2800/03/4d61476d/VisualElement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/697767cb07d84357b6045b31736742eb1f2800/2a/b0dcc451/VisualTreeAsset.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/83b2d8ca7a884e2199e44b398c4cea9334600/4f/ef73daa6/Animator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://D:/UnityCode/DreamOfTheKingdom/Assets/GameData/Map/MapConfigSO.asset" root0="SKIP_HIGHLIGHTING" />
@@ -103,6 +107,14 @@
       <option name="EXE_PATH" value="D:\Program Files\6000.0.18f1c1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath D:\UnityCode\DreamOfTheKingdom -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="D:\UnityCode\DreamOfTheKingdom" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="独立播放器" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$USER_HOME$/OneDrive/Desktop/games\DreamOfTheKingdom.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\李运超\OneDrive\Desktop\games" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <method v="2" />
@@ -206,7 +218,7 @@
       <workItem from="1733154764769" duration="9633000" />
       <workItem from="1733248457519" duration="645000" />
       <workItem from="1733255400537" duration="3964000" />
-      <workItem from="1733315263786" duration="3242000" />
+      <workItem from="1733315263786" duration="7461000" />
     </task>
     <task id="LOCAL-00001" summary="实现随机地图">
       <option name="closed" value="true" />
@@ -520,7 +532,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733259991294</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="完成Boss和整个游戏流程，音效还未添加">
+      <option name="closed" value="true" />
+      <created>1733318781408</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1733318781408</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -559,7 +579,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="抽卡动画" />
     <MESSAGE value="手牌的扇形排布" />
     <MESSAGE value="实现鼠标在卡牌上停留卡牌上移的事件" />
     <MESSAGE value="卡牌拖拽" />
@@ -584,7 +603,8 @@
     <MESSAGE value="抽卡面板的实际逻辑" />
     <MESSAGE value="修复一些BUG" />
     <MESSAGE value="完成精英敌人的制作" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成精英敌人的制作" />
+    <MESSAGE value="完成Boss和整个游戏流程，音效还未添加" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成Boss和整个游戏流程，音效还未添加" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

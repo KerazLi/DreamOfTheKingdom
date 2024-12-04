@@ -28,13 +28,13 @@ MonoBehaviour:
     - CardData
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 6707a5494b692cf48a50ab889e0a7614
-    m_Address: "Assets/GameData/CardData/\u5947\u8FF9\u518D\u73B0.asset"
+    m_Address: "\u5947\u8FF9\u518D\u73B0"
     m_ReadOnly: 0
     m_SerializedLabels:
     - CardData
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: eb84d467d65e56e4eb7b32b32dc6d8ae
-    m_Address: "Assets/GameData/CardData/\u505A\u68A6.asset"
+    m_Address: "\u505A\u68A6"
     m_ReadOnly: 0
     m_SerializedLabels:
     - CardData

@@ -9,7 +9,7 @@ namespace Manager
 {
     public class SceneLoadManager : MonoBehaviour
     {
-
+        public FadePanel fadePanel;
         private AssetReference currentScene;
         public AssetReference map;
         public AssetReference menu;
@@ -22,6 +22,7 @@ namespace Manager
 
         private void Start()
         {
+            
             currentRoomVector = Vector2Int.one*-1;
             LoadMenu();
         }
@@ -65,6 +66,8 @@ namespace Manager
             // 检查加载任务是否成功完成
             if (s.Status==AsyncOperationStatus.Succeeded)
             {
+                //淡出
+                fadePanel.FadeOut(0.2f);
                 // 如果加载成功，则将新加载的场景设置为活动场景
                 SceneManager.SetActiveScene(s.Result.Scene);
             }
@@ -76,8 +79,11 @@ namespace Manager
         /// <returns>返回一个Awaitable对象，用于等待场景卸载完成。</returns>
         private async Awaitable UnloadSceneTask()
         {
+            //淡出
+            fadePanel.FadeIn(0.4f);
+            await Awaitable.WaitForSecondsAsync(0.45f);
             // 使用场景管理器的异步方法卸载当前激活的场景
-            await SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());   
+            await Awaitable.FromAsyncOperation(SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene()) ?? throw new InvalidOperationException("Unable to unload scene"));   
         }
 
         /// <summary>
