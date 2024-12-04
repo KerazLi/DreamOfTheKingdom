@@ -83,7 +83,10 @@ namespace Manager
             }
             
             // 当死亡的角色是敌人时，从存活敌人列表中移除，并检查是否所有敌人都已死亡。
-            if (character is Enemy)
+            if (character is Boss)
+            {
+                StartCoroutine(EventDelayAction(gameOverEvent));
+            }else if (character is Enemy)
             {
                 aliveEnemyList.Remove(character as Enemy);
                 // 如果所有敌人都已死亡，则触发游戏胜利事件。
@@ -92,6 +95,8 @@ namespace Manager
                     StartCoroutine(EventDelayAction(gameWinEvent));
                 }
             }
+
+            
         }
 
         /// <summary>

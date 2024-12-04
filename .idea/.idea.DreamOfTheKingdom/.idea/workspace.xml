@@ -4,17 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89a9e470-03e6-4f27-ad92-72370317cd51" name="Changes" comment="修复一些BUG">
+    <list default="true" id="89a9e470-03e6-4f27-ad92-72370317cd51" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DreamOfTheKingdom/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DreamOfTheKingdom/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Font/SmileySans-Oblique SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Font/SmileySans-Oblique SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameData/Enemy/EnemyAction/MinorEnemyAction.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameData/Enemy/EnemyAction/MinorEnemyAction.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameData/Map/MapConfigSO.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameData/Map/MapConfigSO.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Spine Animations/JuicerKnight/JuicerKnight_Controller.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Spine Animations/JuicerKnight/JuicerKnight_Controller.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameData/Variable/EnemyHP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameData/Variable/EnemyHP.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameData/Variable/PlayerHP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameData/Variable/PlayerHP.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Spine Animations/Mop/Boss_Controller.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Spine Animations/Mop/Boss_Controller.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Spine Animations/PlateKnight/Pzknight_Controller.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/M STUDIO/Card Game Kit/Spine Animations/PlateKnight/Pzknight_Controller.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Boss.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Boss.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/EliteEnemy.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/EliteEnemy.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MinorEnemy.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MinorEnemy.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Character/CharacterBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Character/CharacterBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Character/PlayerAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Character/PlayerAnimation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/VariableTool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/VariableTool.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/GamePlayPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/GamePlayPanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +44,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1d7fdf1f7afe4c58866b88a610a83dc71dda00/84/0625132f/UnityAction`1.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/697767cb07d84357b6045b31736742eb1f2800/2a/b0dcc451/VisualTreeAsset.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/83b2d8ca7a884e2199e44b398c4cea9334600/4f/ef73daa6/Animator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/UnityCode/DreamOfTheKingdom/Assets/GameData/Map/MapConfigSO.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CardEffects/DrawCardEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CardEffects/HealthEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/Player.cs" root0="FORCE_HIGHLIGHTING" />
@@ -201,7 +205,8 @@
       <workItem from="1733154647488" duration="99000" />
       <workItem from="1733154764769" duration="9633000" />
       <workItem from="1733248457519" duration="645000" />
-      <workItem from="1733255400537" duration="3834000" />
+      <workItem from="1733255400537" duration="3964000" />
+      <workItem from="1733315263786" duration="3242000" />
     </task>
     <task id="LOCAL-00001" summary="实现随机地图">
       <option name="closed" value="true" />
@@ -507,7 +512,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733258478228</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="完成精英敌人的制作">
+      <option name="closed" value="true" />
+      <created>1733259991294</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1733259991294</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -546,7 +559,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="完成卡牌对象池" />
     <MESSAGE value="抽卡动画" />
     <MESSAGE value="手牌的扇形排布" />
     <MESSAGE value="实现鼠标在卡牌上停留卡牌上移的事件" />
@@ -571,7 +583,8 @@
     <MESSAGE value="制作胜利和抽卡面板" />
     <MESSAGE value="抽卡面板的实际逻辑" />
     <MESSAGE value="修复一些BUG" />
-    <option name="LAST_COMMIT_MESSAGE" value="修复一些BUG" />
+    <MESSAGE value="完成精英敌人的制作" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成精英敌人的制作" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

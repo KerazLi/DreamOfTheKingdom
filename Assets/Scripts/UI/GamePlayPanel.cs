@@ -19,6 +19,7 @@ namespace UI
             discardAmountLabel = rootElement.Q<Label>("DiscardAmount");
             endTurnButton = rootElement.Q<Button>("EndTurn");
             turnLabel = rootElement.Q<Label>("TurnLabel");
+            endTurnButton.SetEnabled(false);
             endTurnButton.clicked += OnEndTurnButtonClick;
             drawAmountLabel.text = "0";
             discardAmountLabel.text = "0";
